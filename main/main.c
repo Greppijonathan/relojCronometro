@@ -209,17 +209,17 @@ void actualizarPantalla(void *p)
     panel_t PanelSegundos = CrearPanel(132, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
     panel_t PanelDecimas = CrearPanel(252, 0, 1, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
-    panel_t Panelparcial1Minutos = CrearPanel(80, 100, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial1Segundos = CrearPanel(150, 100, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial1Decimas = CrearPanel(220, 100, 1, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial1Minutos = CrearPanel(195, 120, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial1Segundos = CrearPanel(245, 120, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial1Decimas = CrearPanel(295, 120, 1, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
-    panel_t Panelparcial2Minutos = CrearPanel(80, 145, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial2Segundos = CrearPanel(150, 145, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial2Decimas = CrearPanel(220, 145, 1, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial2Minutos = CrearPanel(195, 160, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial2Segundos = CrearPanel(245, 160, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial2Decimas = CrearPanel(295, 160, 1, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
-    panel_t Panelparcial3Minutos = CrearPanel(80, 200, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial3Segundos = CrearPanel(150, 200, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial3Decimas = CrearPanel(220, 200, 1, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial3Minutos = CrearPanel(195, 200, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial3Segundos = CrearPanel(245, 200, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial3Decimas = CrearPanel(295, 200, 1, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
     ILI9341DrawFilledCircle(121, 22, 3, DIGITO_ENCENDIDO);
     ILI9341DrawFilledCircle(121, 62, 3, DIGITO_ENCENDIDO);
