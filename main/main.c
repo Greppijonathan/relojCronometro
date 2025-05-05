@@ -184,6 +184,9 @@ void actualizarPantalla(void *p)
     panel_t PanelMes = CrearPanel(55, 100, 2, 30, 20, ILI9341_WHITE, DIGITO_APAGADO, DIGITO_FONDO);
     panel_t PanelAnio = CrearPanel(110, 100, 4, 30, 20, ILI9341_WHITE, DIGITO_APAGADO, DIGITO_FONDO);
 
+    panel_t PanelHorasAlarma = CrearPanel(95, 140, 2, 30, 20, ILI9341_RED, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelMinutosAlarma = CrearPanel(145, 140, 2, 30, 20, ILI9341_RED, DIGITO_APAGADO, DIGITO_FONDO);
+
     ILI9341DrawFilledCircle(74, 190, 2, DIGITO_ENCENDIDO);
     ILI9341DrawFilledCircle(74, 221, 2, DIGITO_ENCENDIDO);
     ILI9341DrawFilledCircle(148, 225, 2, DIGITO_ENCENDIDO);
@@ -194,6 +197,14 @@ void actualizarPantalla(void *p)
     DibujarDigito(PanelMinutos, 1, 0);
     DibujarDigito(PanelSegundos, 0, 0);
     DibujarDigito(PanelSegundos, 1, 0);
+
+    DibujarDigito(PanelHorasAlarma, 0, 0);
+    DibujarDigito(PanelHorasAlarma, 1, 0);
+    DibujarDigito(PanelMinutosAlarma, 0, 0);
+    DibujarDigito(PanelMinutosAlarma, 1, 0);
+
+    ILI9341DrawString(5, 147, "ALARMA:", &font_11x18, ILI9341_RED, DIGITO_FONDO);
+    ILI9341DrawString(135, 147, ":", &font_11x18, ILI9341_RED, DIGITO_FONDO);
 
     panel_t Panelparcial1Minutos = CrearPanel(195, 120, 2, 30, 20, ILI9341_PURPLE, DIGITO_APAGADO, DIGITO_FONDO);
     panel_t Panelparcial1Segundos = CrearPanel(245, 120, 2, 30, 20, ILI9341_PURPLE, DIGITO_APAGADO, DIGITO_FONDO);
