@@ -80,6 +80,12 @@ extern "C"
      * @param valor      Valor que se desea mostrar en el digito
      */
     void DibujarDigito(panel_t self, uint8_t posicion, uint8_t valor);
+    /**
+     * @brief Borra completamente un panel de la pantalla.
+     *
+     * @param self Puntero al panel que se desea borrar.
+     */
+    void BorrarPanel(panel_t self);
 
     /* === End of documentation ======================================================================================== */
 

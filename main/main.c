@@ -13,6 +13,7 @@ valores y tambien parciales si se mantiene presionado - TECLA 3: Captura de valo
 #include "teclasconfig.h"
 #include "leds.h"
 #include "cronometro.h"
+#include "esp_log.h"
 
 #define DIGITO_ANCHO 50
 #define DIGITO_ALTO 90
@@ -33,7 +34,8 @@ typedef enum
     PAUSAR,
     REINICIAR,
     REINICIARTODO,
-    PARCIAL
+    PARCIAL,
+    MODO_RELOJ
 } estadosCronometro_t;
 
 void leerBotones(void *p)
@@ -47,24 +49,42 @@ void leerBotones(void *p)
     bool estadoanteriorPausa = true;
     bool estadoanteriorReiniciar = true;
     bool estadoanteriorTiempoParcial = true;
+    TickType_t tiempoPresionadoPausa = 0;
     TickType_t tiempoPresionadoReiniciar = 0;
 
     while (1)
     {
+        // --- TEC1: PAUSAR / DETECCIÓN DE PRESIÓN PROLONGADA ---
+        if (gpio_get_level(TEC1_Pausa) == 0)
+        {
+            if (estadoanteriorPausa)
+            {
+                tiempoPresionadoPausa = xTaskGetTickCount(); // Registrar el tiempo de inicio
+                estadoanteriorPausa = false;
+            }
+            else if ((xTaskGetTickCount() - tiempoPresionadoPausa) > pdMS_TO_TICKS(2000)) // Más de 2 segundos
+            {
+                estadosCronometro_t evento = MODO_RELOJ; // Nuevo evento para cambiar a modo reloj
+                xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
 
-        if ((gpio_get_level(TEC1_Pausa) == 0) && estadoanteriorPausa)
-        {
-            estadosCronometro_t evento = PAUSAR;
-            xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
-            flagPausa = !flagPausa;
-            estadoanteriorPausa = false;
-            vTaskDelay(pdMS_TO_TICKS(100));
+                ESP_LOGI("BOTONES", "⏱ Cambio a MODO RELOJ");
+                tiempoPresionadoPausa = 0;
+                vTaskDelay(pdMS_TO_TICKS(500));
+            }
         }
-        else if (gpio_get_level(TEC1_Pausa) != 0)
+        else
         {
+            if (!estadoanteriorPausa && tiempoPresionadoPausa > 0 &&
+                (xTaskGetTickCount() - tiempoPresionadoPausa) <= pdMS_TO_TICKS(2000))
+            {
+                estadosCronometro_t evento = PAUSAR;
+                xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
+            }
+            tiempoPresionadoPausa = 0;
             estadoanteriorPausa = true;
         }
 
+        // --- TEC2: REINICIAR / REINICIAR TODO ---
         if (gpio_get_level(TEC2_Reiniciar) == 0)
         {
             if (estadoanteriorReiniciar)
@@ -72,10 +92,11 @@ void leerBotones(void *p)
                 tiempoPresionadoReiniciar = xTaskGetTickCount();
                 estadoanteriorReiniciar = false;
             }
-            else if ((xTaskGetTickCount() - tiempoPresionadoReiniciar) > pdMS_TO_TICKS(2000))
+            else if ((xTaskGetTickCount() - tiempoPresionadoReiniciar) > pdMS_TO_TICKS(2000)) // Más de 2 segundos
             {
                 estadosCronometro_t evento = REINICIARTODO;
                 xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
+                ESP_LOGI("BOTONES", "🔄 REINICIAR TODO");
                 tiempoPresionadoReiniciar = 0;
                 vTaskDelay(pdMS_TO_TICKS(100));
             }
@@ -87,16 +108,19 @@ void leerBotones(void *p)
             {
                 estadosCronometro_t evento = REINICIAR;
                 xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
+                ESP_LOGI("BOTONES", "🔄 REINICIAR");
             }
             tiempoPresionadoReiniciar = 0;
             estadoanteriorReiniciar = true;
         }
 
+        // --- TEC3: TIEMPO PARCIAL ---
         if ((gpio_get_level(TEC3_Parcial) == 0) && estadoanteriorTiempoParcial)
         {
             estadosCronometro_t evento = PARCIAL;
             xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
             flagParcial = true;
+            ESP_LOGI("BOTONES", "⏳ Tiempo Parcial Registrado");
             estadoanteriorTiempoParcial = false;
             vTaskDelay(pdMS_TO_TICKS(100));
         }
@@ -145,6 +169,23 @@ void manejoEstadosCronometro(void *p)
             case PARCIAL:
                 xQueueSend(colaDigitosParciales, &digitosActuales, portMAX_DELAY);
                 break;
+            case MODO_RELOJ:
+                // Vaciar las colas antes de reiniciar los valores
+                xQueueReset(colaDigitos);
+                xQueueReset(colaDigitosParciales);
+
+                // Reiniciar los valores de los dígitos
+                digitosActuales = (digitos_t){0, 0, 0, 0, 0};
+                enPausa = true;
+                xQueueSend(colaDigitos, &digitosActuales, portMAX_DELAY);
+
+                digitosParciales = (digitos_t){0, 0, 0, 0, 0};
+                xQueueSend(colaDigitosParciales, &digitosParciales, portMAX_DELAY);
+
+                ESP_LOGI("CRONOMETRO", "⏱ MODO RELOJ ACTIVADO - Datos de la cola eliminados y dígitos reiniciados");
+                break;
+
+                break;
             }
         }
 
@@ -155,26 +196,6 @@ void manejoEstadosCronometro(void *p)
         }
 
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(100));
-    }
-}
-
-void manejoLedRGB(void *p)
-{
-    TickType_t xLastWakeTime = xTaskGetTickCount();
-    bool estadoLed = false;
-
-    while (1)
-    {
-        if (flagPausa)
-        {
-            PrenderLedRojo(estadoLed);
-        }
-        else
-        {
-            PrenderLedVerde(estadoLed);
-        }
-        estadoLed = !estadoLed;
-        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
     }
 }
 
@@ -260,7 +281,6 @@ void actualizarPantalla(void *p)
                     DibujarDigito(Panelparcial1Segundos, 1, parcialesPanel1.unidadesSegundos);
                     DibujarDigito(Panelparcial1Decimas, 0, parcialesPanel1.decimasSegundo);
                 }
-
                 xSemaphoreGive(semaforoAccesoDigitos);
             }
         }
