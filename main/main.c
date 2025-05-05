@@ -14,6 +14,9 @@ valores y tambien parciales si se mantiene presionado - TECLA 3: Captura de valo
 #include "leds.h"
 #include "cronometro.h"
 #include "esp_log.h"
+#include <time.h>
+#include "esp_system.h"
+#include <sys/time.h>
 
 #define DIGITO_ANCHO 40
 #define DIGITO_ALTO 80
@@ -28,6 +31,74 @@ SemaphoreHandle_t semaforoAccesoDigitos;
 
 bool flagPausa = true;
 bool flagParcial = false;
+
+panel_t PanelMinutosCron, PanelSegundosCron, PanelDecimasCron;
+panel_t Panelparcial1Minutos, Panelparcial1Segundos, Panelparcial1Decimas;
+panel_t Panelparcial2Minutos, Panelparcial2Segundos, Panelparcial2Decimas;
+panel_t Panelparcial3Minutos, Panelparcial3Segundos, Panelparcial3Decimas;
+panel_t PanelHoras, PanelMinutos, PanelSegundos;
+panel_t PanelDia, PanelMes, PanelAnio;
+panel_t PanelHorasAlarma, PanelMinutosAlarma;
+
+static int alarmaHoras = 12;
+static int alarmaMinutos = 1;
+
+/******************** FUNCIONES ***************************************/
+void inicializarPantallaCronometro()
+{
+    PanelMinutosCron = CrearPanel(5, 180, 2, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    PanelSegundosCron = CrearPanel(80, 180, 2, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    PanelDecimasCron = CrearPanel(155, 180, 1, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+
+    Panelparcial1Minutos = CrearPanel(195, 120, 2, 30, 20, ILI9341_PURPLE, DIGITO_APAGADO, DIGITO_FONDO);
+    Panelparcial1Segundos = CrearPanel(245, 120, 2, 30, 20, ILI9341_PURPLE, DIGITO_APAGADO, DIGITO_FONDO);
+    Panelparcial1Decimas = CrearPanel(295, 120, 1, 30, 20, ILI9341_PURPLE, DIGITO_APAGADO, DIGITO_FONDO);
+
+    Panelparcial2Minutos = CrearPanel(195, 160, 2, 30, 20, ILI9341_CYAN, DIGITO_APAGADO, DIGITO_FONDO);
+    Panelparcial2Segundos = CrearPanel(245, 160, 2, 30, 20, ILI9341_CYAN, DIGITO_APAGADO, DIGITO_FONDO);
+    Panelparcial2Decimas = CrearPanel(295, 160, 1, 30, 20, ILI9341_CYAN, DIGITO_APAGADO, DIGITO_FONDO);
+
+    Panelparcial3Minutos = CrearPanel(195, 200, 2, 30, 20, ILI9341_GREEN, DIGITO_APAGADO, DIGITO_FONDO);
+    Panelparcial3Segundos = CrearPanel(245, 200, 2, 30, 20, ILI9341_GREEN, DIGITO_APAGADO, DIGITO_FONDO);
+    Panelparcial3Decimas = CrearPanel(295, 200, 1, 30, 20, ILI9341_GREEN, DIGITO_APAGADO, DIGITO_FONDO);
+
+    ILI9341DrawFilledCircle(74, 190, 2, DIGITO_ENCENDIDO);
+    ILI9341DrawFilledCircle(74, 221, 2, DIGITO_ENCENDIDO);
+    ILI9341DrawFilledCircle(148, 225, 2, DIGITO_ENCENDIDO);
+
+    DibujarDigito(PanelMinutosCron, 0, 0);
+    DibujarDigito(PanelMinutosCron, 1, 0);
+    DibujarDigito(PanelSegundosCron, 0, 0);
+    DibujarDigito(PanelSegundosCron, 1, 0);
+    DibujarDigito(PanelDecimasCron, 0, 0);
+}
+void inicializarPantallaReloj()
+{
+    PanelHoras = CrearPanel(11, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, ILI9341_GREENYELLOW, DIGITO_APAGADO, DIGITO_FONDO);
+    PanelMinutos = CrearPanel(115, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, ILI9341_GREENYELLOW, DIGITO_APAGADO, DIGITO_FONDO);
+    PanelSegundos = CrearPanel(225, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, ILI9341_GREENYELLOW, DIGITO_APAGADO, DIGITO_FONDO);
+
+    PanelDia = CrearPanel(5, 100, 2, 30, 20, ILI9341_WHITE, DIGITO_APAGADO, DIGITO_FONDO);
+    PanelMes = CrearPanel(55, 100, 2, 30, 20, ILI9341_WHITE, DIGITO_APAGADO, DIGITO_FONDO);
+    PanelAnio = CrearPanel(110, 100, 4, 30, 20, ILI9341_WHITE, DIGITO_APAGADO, DIGITO_FONDO);
+
+    PanelHorasAlarma = CrearPanel(90, 140, 2, 30, 20, ILI9341_RED, DIGITO_APAGADO, DIGITO_FONDO);
+    PanelMinutosAlarma = CrearPanel(145, 140, 2, 30, 20, ILI9341_RED, DIGITO_APAGADO, DIGITO_FONDO);
+
+    ILI9341DrawCircle(103, 25, 3, ILI9341_GREENYELLOW);
+    ILI9341DrawCircle(103, 55, 3, ILI9341_GREENYELLOW);
+    ILI9341DrawCircle(210, 25, 3, ILI9341_GREENYELLOW);
+    ILI9341DrawCircle(210, 55, 3, ILI9341_GREENYELLOW);
+
+    ILI9341DrawString(97, 105, "-", &font_11x18, ILI9341_WHITE, DIGITO_FONDO);
+    ILI9341DrawString(45, 105, "-", &font_11x18, ILI9341_WHITE, DIGITO_FONDO);
+
+    ILI9341DrawString(5, 147, "ALARMA", &font_11x18, ILI9341_RED, DIGITO_FONDO);
+    ILI9341DrawString(133, 147, ":", &font_11x18, ILI9341_RED, DIGITO_FONDO);
+    ILI9341DrawString(195, 90, "PARCIALES", &font_11x18, ILI9341_RED, DIGITO_FONDO);
+}
+
+/******************** FUNCIONES ***************************************/
 
 typedef enum
 {
@@ -159,85 +230,11 @@ void manejoEstadosCronometro(void *p)
     }
 }
 
-void actualizarPantalla(void *p)
+void actualizarPantallaCronometro(void *p)
 {
     TickType_t xLastWakeTime = xTaskGetTickCount();
-    ILI9341Init();
-    ILI9341Rotate(ILI9341_Landscape_1);
-    panel_t PanelHoras = CrearPanel(11, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, ILI9341_GREENYELLOW, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t PanelMinutos = CrearPanel(115, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, ILI9341_GREENYELLOW, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t PanelSegundos = CrearPanel(225, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, ILI9341_GREENYELLOW, DIGITO_APAGADO, DIGITO_FONDO);
 
-    ILI9341DrawCircle(103, 25, 3, ILI9341_GREENYELLOW);
-    ILI9341DrawCircle(103, 55, 3, ILI9341_GREENYELLOW);
-    ILI9341DrawCircle(210, 25, 3, ILI9341_GREENYELLOW);
-    ILI9341DrawCircle(210, 55, 3, ILI9341_GREENYELLOW);
-
-    ILI9341DrawString(97, 105, "-", &font_11x18, ILI9341_WHITE, DIGITO_FONDO);
-    ILI9341DrawString(45, 105, "-", &font_11x18, ILI9341_WHITE, DIGITO_FONDO);
-
-    panel_t PanelMinutosCron = CrearPanel(5, 180, 2, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t PanelSegundosCron = CrearPanel(80, 180, 2, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t PanelDecimasCron = CrearPanel(155, 180, 1, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-
-    panel_t PanelDia = CrearPanel(5, 100, 2, 30, 20, ILI9341_WHITE, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t PanelMes = CrearPanel(55, 100, 2, 30, 20, ILI9341_WHITE, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t PanelAnio = CrearPanel(110, 100, 4, 30, 20, ILI9341_WHITE, DIGITO_APAGADO, DIGITO_FONDO);
-
-    panel_t PanelHorasAlarma = CrearPanel(90, 140, 2, 30, 20, ILI9341_RED, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t PanelMinutosAlarma = CrearPanel(145, 140, 2, 30, 20, ILI9341_RED, DIGITO_APAGADO, DIGITO_FONDO);
-
-    ILI9341DrawFilledCircle(74, 190, 2, DIGITO_ENCENDIDO);
-    ILI9341DrawFilledCircle(74, 221, 2, DIGITO_ENCENDIDO);
-    ILI9341DrawFilledCircle(148, 225, 2, DIGITO_ENCENDIDO);
-
-    DibujarDigito(PanelHoras, 0, 0);
-    DibujarDigito(PanelHoras, 1, 0);
-    DibujarDigito(PanelMinutos, 0, 0);
-    DibujarDigito(PanelMinutos, 1, 0);
-    DibujarDigito(PanelSegundos, 0, 0);
-    DibujarDigito(PanelSegundos, 1, 0);
-
-    DibujarDigito(PanelHorasAlarma, 0, 0);
-    DibujarDigito(PanelHorasAlarma, 1, 0);
-    DibujarDigito(PanelMinutosAlarma, 0, 0);
-    DibujarDigito(PanelMinutosAlarma, 1, 0);
-
-    ILI9341DrawString(5, 147, "ALARMA", &font_11x18, ILI9341_RED, DIGITO_FONDO);
-    ILI9341DrawString(133, 147, ":", &font_11x18, ILI9341_RED, DIGITO_FONDO);
-
-    ILI9341DrawString(195, 90, "PARCIALES", &font_11x18, ILI9341_RED, DIGITO_FONDO);
-
-    panel_t Panelparcial1Minutos = CrearPanel(195, 120, 2, 30, 20, ILI9341_PURPLE, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial1Segundos = CrearPanel(245, 120, 2, 30, 20, ILI9341_PURPLE, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial1Decimas = CrearPanel(295, 120, 1, 30, 20, ILI9341_PURPLE, DIGITO_APAGADO, DIGITO_FONDO);
-
-    panel_t Panelparcial2Minutos = CrearPanel(195, 160, 2, 30, 20, ILI9341_CYAN, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial2Segundos = CrearPanel(245, 160, 2, 30, 20, ILI9341_CYAN, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial2Decimas = CrearPanel(295, 160, 1, 30, 20, ILI9341_CYAN, DIGITO_APAGADO, DIGITO_FONDO);
-
-    panel_t Panelparcial3Minutos = CrearPanel(195, 200, 2, 30, 20, ILI9341_GREEN, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial3Segundos = CrearPanel(245, 200, 2, 30, 20, ILI9341_GREEN, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial3Decimas = CrearPanel(295, 200, 1, 30, 20, ILI9341_GREEN, DIGITO_APAGADO, DIGITO_FONDO);
-
-    //   ILI9341DrawFilledCircle(121, 22, 3, DIGITO_ENCENDIDO);
-    //   ILI9341DrawFilledCircle(121, 62, 3, DIGITO_ENCENDIDO);
-    //   ILI9341DrawFilledCircle(244, 80, 3, DIGITO_ENCENDIDO);
-
-    DibujarDigito(PanelMinutosCron, 0, 0);
-    DibujarDigito(PanelMinutosCron, 1, 0);
-    DibujarDigito(PanelSegundosCron, 0, 0);
-    DibujarDigito(PanelSegundosCron, 1, 0);
-    DibujarDigito(PanelDecimasCron, 0, 0);
-
-    DibujarDigito(PanelDia, 0, 0);
-    DibujarDigito(PanelDia, 1, 1);
-    DibujarDigito(PanelMes, 0, 1);
-    DibujarDigito(PanelMes, 1, 0);
-    DibujarDigito(PanelAnio, 0, 2);
-    DibujarDigito(PanelAnio, 1, 0);
-    DibujarDigito(PanelAnio, 2, 2);
-    DibujarDigito(PanelAnio, 3, 5);
+    inicializarPantallaCronometro();
 
     digitos_t digitosPrevios = {-1, -1, -1, -1, -1};
     digitos_t parcialesPanel1 = {-1, -1, -1, -1, -1};
@@ -296,18 +293,127 @@ void actualizarPantalla(void *p)
     }
 }
 
+void actualizarPantallaReloj(void *p)
+{
+    inicializarPantallaReloj();
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+
+    struct tm timeinfo, timeinfo_prev;
+    time_t now;
+    time(&now);
+    localtime_r(&now, &timeinfo);
+    timeinfo_prev = timeinfo;
+
+    DibujarDigito(PanelHoras, 0, timeinfo.tm_hour / 10);
+    DibujarDigito(PanelHoras, 1, timeinfo.tm_hour % 10);
+    DibujarDigito(PanelMinutos, 0, timeinfo.tm_min / 10);
+    DibujarDigito(PanelMinutos, 1, timeinfo.tm_min % 10);
+    DibujarDigito(PanelSegundos, 0, timeinfo.tm_sec / 10);
+    DibujarDigito(PanelSegundos, 1, timeinfo.tm_sec % 10);
+    DibujarDigito(PanelDia, 0, timeinfo.tm_mday / 10);
+    DibujarDigito(PanelDia, 1, timeinfo.tm_mday % 10);
+    DibujarDigito(PanelMes, 0, (timeinfo.tm_mon + 1) / 10);
+    DibujarDigito(PanelMes, 1, (timeinfo.tm_mon + 1) % 10);
+
+    int year = timeinfo.tm_year + 1900;
+    int year_prev = year;
+
+    DibujarDigito(PanelAnio, 0, (year / 1000) % 10);
+    DibujarDigito(PanelAnio, 1, (year / 100) % 10);
+    DibujarDigito(PanelAnio, 2, (year / 10) % 10);
+    DibujarDigito(PanelAnio, 3, year % 10);
+
+    int horasAlarmaAnterior = alarmaHoras;
+    int minutosAlarmaAnterior = alarmaMinutos;
+
+    DibujarDigito(PanelMinutosAlarma, 0, (alarmaMinutos / 10) % 10);
+    DibujarDigito(PanelMinutosAlarma, 1, alarmaMinutos % 10);
+
+    DibujarDigito(PanelHorasAlarma, 0, (alarmaHoras / 10) % 10);
+    DibujarDigito(PanelHorasAlarma, 1, alarmaHoras % 10);
+
+    while (1)
+    {
+        time(&now);
+        localtime_r(&now, &timeinfo);
+
+        if (timeinfo.tm_hour != timeinfo_prev.tm_hour)
+        {
+            DibujarDigito(PanelHoras, 0, timeinfo.tm_hour / 10);
+            DibujarDigito(PanelHoras, 1, timeinfo.tm_hour % 10);
+        }
+        if (timeinfo.tm_min != timeinfo_prev.tm_min)
+        {
+            DibujarDigito(PanelMinutos, 0, timeinfo.tm_min / 10);
+            DibujarDigito(PanelMinutos, 1, timeinfo.tm_min % 10);
+        }
+        if (timeinfo.tm_sec != timeinfo_prev.tm_sec)
+        {
+            DibujarDigito(PanelSegundos, 0, timeinfo.tm_sec / 10);
+            DibujarDigito(PanelSegundos, 1, timeinfo.tm_sec % 10);
+        }
+        if (timeinfo.tm_mday != timeinfo_prev.tm_mday)
+        {
+            DibujarDigito(PanelDia, 0, timeinfo.tm_mday / 10);
+            DibujarDigito(PanelDia, 1, timeinfo.tm_mday % 10);
+        }
+        if (timeinfo.tm_mon != timeinfo_prev.tm_mon)
+        {
+            DibujarDigito(PanelMes, 0, (timeinfo.tm_mon + 1) / 10);
+            DibujarDigito(PanelMes, 1, (timeinfo.tm_mon + 1) % 10);
+        }
+        year = timeinfo.tm_year + 1900;
+        if (year != year_prev)
+        {
+            DibujarDigito(PanelAnio, 0, (year / 1000) % 10);
+            DibujarDigito(PanelAnio, 1, (year / 100) % 10);
+            DibujarDigito(PanelAnio, 2, (year / 10) % 10);
+            DibujarDigito(PanelAnio, 3, year % 10);
+            year_prev = year;
+        }
+        timeinfo_prev = timeinfo;
+        if (alarmaHoras != horasAlarmaAnterior)
+        {
+            DibujarDigito(PanelHorasAlarma, 0, (alarmaHoras / 10) % 10);
+            DibujarDigito(PanelHorasAlarma, 1, alarmaHoras % 10);
+            horasAlarmaAnterior = alarmaHoras;
+        }
+        if (alarmaMinutos != minutosAlarmaAnterior)
+        {
+            DibujarDigito(PanelMinutosAlarma, 0, (alarmaMinutos / 10) % 10);
+            DibujarDigito(PanelMinutosAlarma, 1, alarmaMinutos % 10);
+            minutosAlarmaAnterior = alarmaMinutos;
+        }
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(250));
+    }
+}
 void app_main()
 {
     ConfigurarSalidasLed();
     apagarLeds();
+    ILI9341Init();
+    ILI9341Rotate(ILI9341_Landscape_1);
 
     colaDigitosParciales = xQueueCreate(3, sizeof(digitos_t));
     colaDigitos = xQueueCreate(5, sizeof(digitos_t));
     colaEstadosCronometro = xQueueCreate(5, sizeof(estadosCronometro_t));
     semaforoAccesoDigitos = xSemaphoreCreateMutex();
 
-    xTaskCreate(leerBotones, "LecturaBotonera", 2048, NULL, 1, NULL);
-    xTaskCreate(manejoEstadosCronometro, "Tiempo100ms", 2048, NULL, 3, NULL);
-    xTaskCreate(actualizarPantalla, "ActualizarPantalla", 4096, NULL, 2, NULL);
+    struct tm timeinfo = {
+        .tm_year = 2025 - 1900,
+        .tm_mon = 0,
+        .tm_mday = 1,
+        .tm_hour = 12,
+        .tm_min = 0,
+        .tm_sec = 0};
+
+    time_t t = mktime(&timeinfo);
+    struct timeval now = {.tv_sec = t};
+    settimeofday(&now, NULL);
+
+    xTaskCreate(leerBotones, "LecturaBotonera", 2048, NULL, 3, NULL);
+    xTaskCreate(manejoEstadosCronometro, "Tiempo100ms", 2048, NULL, 4, NULL);
+    xTaskCreate(actualizarPantallaCronometro, "ActualizarPantalla", 4096, NULL, 2, NULL);
+    xTaskCreate(actualizarPantallaReloj, "ActualizarPantallaReloj", 4096, NULL, 1, NULL);
     //    xTaskCreate(manejoLedRGB, "LedsTestigos", 4096, NULL, 1, NULL);
 }

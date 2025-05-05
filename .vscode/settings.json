@@ -15,6 +15,7 @@
     },
     "idf.flashType": "UART",
     "files.associations": {
-        "teclasconfig.h": "c"
+        "teclasconfig.h": "c",
+        "digitos.h": "c"
     }
 }
