@@ -16,7 +16,7 @@ valores y tambien parciales si se mantiene presionado - TECLA 3: Captura de valo
 
 #define DIGITO_ANCHO 50
 #define DIGITO_ALTO 90
-#define DIGITO_ENCENDIDO ILI9341_RED
+#define DIGITO_ENCENDIDO ILI9341_BLUE2
 #define DIGITO_APAGADO 0x3800
 #define DIGITO_FONDO ILI9341_BLACK
 
@@ -162,7 +162,6 @@ void manejoLedRGB(void *p)
 {
     TickType_t xLastWakeTime = xTaskGetTickCount();
     bool estadoLed = false;
-    ConfigurarSalidasLed();
 
     while (1)
     {
@@ -271,6 +270,9 @@ void actualizarPantalla(void *p)
 
 void app_main()
 {
+    ConfigurarSalidasLed();
+    apagarLeds();
+
     colaDigitosParciales = xQueueCreate(3, sizeof(digitos_t));
     colaDigitos = xQueueCreate(5, sizeof(digitos_t));
     colaEstadosCronometro = xQueueCreate(5, sizeof(estadosCronometro_t));
@@ -279,5 +281,5 @@ void app_main()
     xTaskCreate(leerBotones, "LecturaBotonera", 2048, NULL, 1, NULL);
     xTaskCreate(manejoEstadosCronometro, "Tiempo100ms", 2048, NULL, 3, NULL);
     xTaskCreate(actualizarPantalla, "ActualizarPantalla", 4096, NULL, 2, NULL);
-//    xTaskCreate(manejoLedRGB, "LedsTestigos", 4096, NULL, 1, NULL);
+    //    xTaskCreate(manejoLedRGB, "LedsTestigos", 4096, NULL, 1, NULL);
 }
