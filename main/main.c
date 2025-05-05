@@ -164,24 +164,36 @@ void actualizarPantalla(void *p)
     TickType_t xLastWakeTime = xTaskGetTickCount();
     ILI9341Init();
     ILI9341Rotate(ILI9341_Landscape_1);
-    panel_t PanelHoras = CrearPanel(11, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t PanelMinutos = CrearPanel(115, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t PanelSegundos = CrearPanel(225, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelHoras = CrearPanel(11, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, ILI9341_GREENYELLOW, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelMinutos = CrearPanel(115, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, ILI9341_GREENYELLOW, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelSegundos = CrearPanel(225, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, ILI9341_GREENYELLOW, DIGITO_APAGADO, DIGITO_FONDO);
 
-    ILI9341DrawCircle(103, 25, 3, DIGITO_ENCENDIDO);
-    ILI9341DrawCircle(103, 55, 3, DIGITO_ENCENDIDO);
-    ILI9341DrawCircle(210, 25, 3, DIGITO_ENCENDIDO);
-    ILI9341DrawCircle(210, 55, 3, DIGITO_ENCENDIDO);
-    //   ILI9341DrawString(95, 110, "-", &font_11x18, DIGITO_ENCENDIDO, DIGITO_FONDO);
-    //   ILI9341DrawString(165, 110, "-", &font_11x18, DIGITO_ENCENDIDO, DIGITO_FONDO);
+    ILI9341DrawCircle(103, 25, 3, ILI9341_GREENYELLOW);
+    ILI9341DrawCircle(103, 55, 3, ILI9341_GREENYELLOW);
+    ILI9341DrawCircle(210, 25, 3, ILI9341_GREENYELLOW);
+    ILI9341DrawCircle(210, 55, 3, ILI9341_GREENYELLOW);
+
+    ILI9341DrawString(97, 105, "-", &font_11x18, ILI9341_WHITE, DIGITO_FONDO);
+    ILI9341DrawString(45, 105, "-", &font_11x18, ILI9341_WHITE, DIGITO_FONDO);
 
     panel_t PanelMinutosCron = CrearPanel(5, 180, 2, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
     panel_t PanelSegundosCron = CrearPanel(80, 180, 2, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
     panel_t PanelDecimasCron = CrearPanel(155, 180, 1, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
+    panel_t PanelDia = CrearPanel(5, 100, 2, 30, 20, ILI9341_WHITE, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelMes = CrearPanel(55, 100, 2, 30, 20, ILI9341_WHITE, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelAnio = CrearPanel(110, 100, 4, 30, 20, ILI9341_WHITE, DIGITO_APAGADO, DIGITO_FONDO);
+
     ILI9341DrawFilledCircle(74, 190, 2, DIGITO_ENCENDIDO);
     ILI9341DrawFilledCircle(74, 221, 2, DIGITO_ENCENDIDO);
     ILI9341DrawFilledCircle(148, 225, 2, DIGITO_ENCENDIDO);
+
+    DibujarDigito(PanelHoras, 0, 0);
+    DibujarDigito(PanelHoras, 1, 0);
+    DibujarDigito(PanelMinutos, 0, 0);
+    DibujarDigito(PanelMinutos, 1, 0);
+    DibujarDigito(PanelSegundos, 0, 0);
+    DibujarDigito(PanelSegundos, 1, 0);
 
     panel_t Panelparcial1Minutos = CrearPanel(195, 120, 2, 30, 20, ILI9341_PURPLE, DIGITO_APAGADO, DIGITO_FONDO);
     panel_t Panelparcial1Segundos = CrearPanel(245, 120, 2, 30, 20, ILI9341_PURPLE, DIGITO_APAGADO, DIGITO_FONDO);
@@ -204,6 +216,15 @@ void actualizarPantalla(void *p)
     DibujarDigito(PanelSegundosCron, 0, 0);
     DibujarDigito(PanelSegundosCron, 1, 0);
     DibujarDigito(PanelDecimasCron, 0, 0);
+
+    DibujarDigito(PanelDia, 0, 0);
+    DibujarDigito(PanelDia, 1, 1);
+    DibujarDigito(PanelMes, 0, 1);
+    DibujarDigito(PanelMes, 1, 0);
+    DibujarDigito(PanelAnio, 0, 2);
+    DibujarDigito(PanelAnio, 1, 0);
+    DibujarDigito(PanelAnio, 2, 2);
+    DibujarDigito(PanelAnio, 3, 5);
 
     digitos_t digitosPrevios = {-1, -1, -1, -1, -1};
     digitos_t parcialesPanel1 = {-1, -1, -1, -1, -1};
