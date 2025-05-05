@@ -2032,3 +2032,638 @@
 207	434	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
 207	434	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
 207	434	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+285	554	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+285	554	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+285	554	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+285	554	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+285	554	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+285	554	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+285	554	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+285	554	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+296	761	7681183183984001	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+762	903	7681183185474917	esp-idf/main/libmain.a	16c7f7bf3462455f
+903	11640	7681183291981920	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+903	11640	7681183291981920	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+11641	12391	7681183299983907	cronometro1erEntrega.elf	339b0aa7a355b7a9
+12392	12807	7681183304504796	.bin_timestamp	eccac8ebdacb8a3a
+12392	12807	7681183304504796	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+12807	12952	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+12807	12952	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+243	502	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+243	502	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+243	502	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+243	502	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+243	502	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+243	502	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+243	502	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+243	502	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+252	698	7681184125263903	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+699	833	7681184126630409	esp-idf/main/libmain.a	16c7f7bf3462455f
+834	10515	7681184222969544	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+834	10515	7681184222969544	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10516	11225	7681184230170067	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11226	11689	7681184235102548	.bin_timestamp	eccac8ebdacb8a3a
+11226	11689	7681184235102548	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11690	11825	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11690	11825	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+211	458	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+211	458	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+211	458	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+211	458	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+211	458	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+211	458	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+211	458	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+211	458	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+220	647	7681184984266527	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+648	785	7681184985705558	esp-idf/main/libmain.a	16c7f7bf3462455f
+785	10624	7681185083667468	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+785	10624	7681185083667468	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10625	11345	7681185090864656	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11345	11765	7681185095470081	.bin_timestamp	eccac8ebdacb8a3a
+11345	11765	7681185095470081	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11765	11901	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11765	11901	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+219	469	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+219	469	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+219	469	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+219	469	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+219	469	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+219	469	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+219	469	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+219	469	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+228	675	7681185820622402	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+676	813	7681185822024628	esp-idf/main/libmain.a	16c7f7bf3462455f
+814	10413	7681185917566596	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+814	10413	7681185917566596	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10414	11140	7681185924911573	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11141	11553	7681185929403345	.bin_timestamp	eccac8ebdacb8a3a
+11141	11553	7681185929403345	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11553	11675	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11553	11675	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+236	492	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+236	492	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+236	492	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+236	492	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+236	492	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+236	492	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+236	492	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+236	492	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+246	693	7681186875866863	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+694	829	7681186877242097	esp-idf/main/libmain.a	16c7f7bf3462455f
+829	10494	7681186973481288	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+829	10494	7681186973481288	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10494	11178	7681186980396374	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11179	11607	7681186984969119	.bin_timestamp	eccac8ebdacb8a3a
+11179	11607	7681186984969119	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11608	11733	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11608	11733	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+314	638	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+314	638	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+314	638	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+314	638	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+314	638	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+314	638	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+314	638	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+314	638	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+194	430	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+194	430	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+194	430	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+194	430	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+194	430	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+194	430	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+194	430	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+194	430	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+204	664	7681189382120752	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+665	829	7681189383770580	esp-idf/main/libmain.a	16c7f7bf3462455f
+829	11190	7681189486916510	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+829	11190	7681189486916510	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+11191	11909	7681189494187646	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11909	12339	7681189498872479	.bin_timestamp	eccac8ebdacb8a3a
+11909	12339	7681189498872479	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+12339	12457	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+12339	12457	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+154	372	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+154	372	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+154	372	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+154	372	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+154	372	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+154	372	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+154	372	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+154	372	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+165	506	7681189887815375	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+507	619	7681189888959639	esp-idf/main/libmain.a	16c7f7bf3462455f
+619	9800	7681189980275983	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+619	9800	7681189980275983	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+9800	10571	7681189988068563	cronometro1erEntrega.elf	339b0aa7a355b7a9
+10572	10938	7681189992145411	.bin_timestamp	eccac8ebdacb8a3a
+10572	10938	7681189992145411	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+10939	11064	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+10939	11064	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+203	460	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+203	460	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+203	460	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+203	460	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+203	460	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+203	460	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+203	460	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+203	460	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+213	679	7681190321357824	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+680	820	7681190322767566	esp-idf/main/libmain.a	16c7f7bf3462455f
+820	10669	7681190420775968	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+820	10669	7681190420775968	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10670	11418	7681190428436489	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11419	11831	7681190432836573	.bin_timestamp	eccac8ebdacb8a3a
+11419	11831	7681190432836573	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11831	11969	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11831	11969	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+229	538	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+229	538	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+229	538	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+229	538	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+229	538	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+229	538	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+229	538	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+229	538	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+239	775	7681190984714276	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+777	1010	7681190987058097	esp-idf/main/libmain.a	16c7f7bf3462455f
+1011	12219	7681191098495269	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+1011	12219	7681191098495269	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+12219	13044	7681191107080916	cronometro1erEntrega.elf	339b0aa7a355b7a9
+13045	13471	7681191111596963	.bin_timestamp	eccac8ebdacb8a3a
+13045	13471	7681191111596963	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+13472	13603	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+13472	13603	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+282	568	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+282	568	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+282	568	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+282	568	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+282	568	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+282	568	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+282	568	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+282	568	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+300	655	7681191823310169	esp-idf/main/CMakeFiles/__idf_main.dir/digitos.c.obj	aee3ecc3b7197671
+292	854	7681191825341748	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+855	1012	7681191826912935	esp-idf/main/libmain.a	16c7f7bf3462455f
+1012	12323	7681191939450226	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+1012	12323	7681191939450226	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+12324	13160	7681191948079346	cronometro1erEntrega.elf	339b0aa7a355b7a9
+13161	13664	7681191953380833	.bin_timestamp	eccac8ebdacb8a3a
+13161	13664	7681191953380833	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+13664	13797	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+13664	13797	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+248	526	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+248	526	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+248	526	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+248	526	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+248	526	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+248	526	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+248	526	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+248	526	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+265	595	7681192842424926	esp-idf/main/CMakeFiles/__idf_main.dir/digitos.c.obj	aee3ecc3b7197671
+258	764	7681192844135269	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+765	966	7681192846144282	esp-idf/main/libmain.a	16c7f7bf3462455f
+966	12058	7681192956266555	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+966	12058	7681192956266555	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+12059	13029	7681192966424560	cronometro1erEntrega.elf	339b0aa7a355b7a9
+13029	13802	7681192974395462	.bin_timestamp	eccac8ebdacb8a3a
+13029	13802	7681192974395462	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+13803	14018	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+13803	14018	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+193	431	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+193	431	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+193	431	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+193	431	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+193	431	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+193	431	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+193	431	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+193	431	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+202	677	7681193317067755	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+678	821	7681193318578397	esp-idf/main/libmain.a	16c7f7bf3462455f
+822	10786	7681193417789936	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+822	10786	7681193417789936	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10787	11585	7681193425888113	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11586	11967	7681193429995412	.bin_timestamp	eccac8ebdacb8a3a
+11586	11967	7681193429995412	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11968	12089	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11968	12089	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+230	498	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+230	498	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+230	498	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+230	498	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+230	498	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+230	498	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+230	498	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+230	498	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+239	745	7681194080582597	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+746	1001	7681194083147620	esp-idf/main/libmain.a	16c7f7bf3462455f
+1001	11372	7681194186349887	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+1001	11372	7681194186349887	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+11372	12076	7681194193768254	cronometro1erEntrega.elf	339b0aa7a355b7a9
+12077	12468	7681194197826286	.bin_timestamp	eccac8ebdacb8a3a
+12077	12468	7681194197826286	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+12469	12588	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+12469	12588	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+151	342	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+151	342	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+151	342	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+151	342	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+151	342	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+151	342	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+151	342	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+151	342	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+159	465	7681194576716820	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+466	664	7681194578694581	esp-idf/main/libmain.a	16c7f7bf3462455f
+664	9297	7681194664503167	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+664	9297	7681194664503167	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+9298	9864	7681194670419118	cronometro1erEntrega.elf	339b0aa7a355b7a9
+9865	10189	7681194673941354	.bin_timestamp	eccac8ebdacb8a3a
+9865	10189	7681194673941354	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+10189	10306	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+10189	10306	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+306	558	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+306	558	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+306	558	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+306	558	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+306	558	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+306	558	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+306	558	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+306	558	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+317	807	7681196685997332	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+808	1014	7681196688078766	esp-idf/main/libmain.a	16c7f7bf3462455f
+1015	11221	7681196789639238	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+1015	11221	7681196789639238	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+11221	12569	7681196803225345	cronometro1erEntrega.elf	339b0aa7a355b7a9
+12570	13214	7681196810045770	.bin_timestamp	eccac8ebdacb8a3a
+12570	13214	7681196810045770	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+13214	13368	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+13214	13368	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+250	505	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+250	505	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+250	505	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+250	505	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+250	505	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+250	505	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+250	505	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+250	505	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+261	756	7681197725269617	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+757	967	7681197727419852	esp-idf/main/libmain.a	16c7f7bf3462455f
+968	11704	7681197834366507	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+968	11704	7681197834366507	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+11704	12384	7681197841407333	cronometro1erEntrega.elf	339b0aa7a355b7a9
+12385	12937	7681197847069892	.bin_timestamp	eccac8ebdacb8a3a
+12385	12937	7681197847069892	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+12937	13062	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+12937	13062	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+190	419	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+190	419	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+190	419	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+190	419	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+190	419	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+190	419	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+190	419	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+190	419	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+198	645	7681198205379959	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+646	787	7681198206865644	esp-idf/main/libmain.a	16c7f7bf3462455f
+788	10461	7681198303069208	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+788	10461	7681198303069208	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10461	11234	7681198311078307	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11234	11644	7681198315415827	.bin_timestamp	eccac8ebdacb8a3a
+11234	11644	7681198315415827	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11644	11765	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11644	11765	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+241	357	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+241	357	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+232	452	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+232	452	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+232	452	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+232	452	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+232	452	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+232	452	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+232	452	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+232	452	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+310	472	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+310	472	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+299	600	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+299	600	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+299	600	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+299	600	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+299	600	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+299	600	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+299	600	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+299	600	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+191	332	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+191	332	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+180	419	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+180	419	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+180	419	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+180	419	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+180	419	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+180	419	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+180	419	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+180	419	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+228	457	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+228	457	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+228	457	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+228	457	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+228	457	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+228	457	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+228	457	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+228	457	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+238	723	7681199666966185	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+725	978	7681199669528607	esp-idf/main/libmain.a	16c7f7bf3462455f
+978	10794	7681199767256577	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+978	10794	7681199767256577	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10795	11533	7681199774768658	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11534	11933	7681199779066349	.bin_timestamp	eccac8ebdacb8a3a
+11534	11933	7681199779066349	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11934	12060	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11934	12060	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+282	548	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+282	548	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+282	548	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+282	548	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+282	548	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+282	548	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+282	548	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+282	548	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+294	770	7681201574251384	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+772	911	7681201575668853	esp-idf/main/libmain.a	16c7f7bf3462455f
+911	10853	7681201674518696	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+911	10853	7681201674518696	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10853	11631	7681201682465329	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11632	12051	7681201687057135	.bin_timestamp	eccac8ebdacb8a3a
+11632	12051	7681201687057135	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+12052	12179	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+12052	12179	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+199	447	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+199	447	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+199	447	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+199	447	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+199	447	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+199	447	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+199	447	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+199	447	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+209	674	7681202112521247	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+675	821	7681202113982558	esp-idf/main/libmain.a	16c7f7bf3462455f
+821	10577	7681202211167228	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+821	10577	7681202211167228	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10577	11295	7681202218416509	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11295	11701	7681202222815991	.bin_timestamp	eccac8ebdacb8a3a
+11295	11701	7681202222815991	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11701	11824	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11701	11824	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+257	537	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+257	537	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+257	537	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+257	537	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+257	537	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+257	537	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+257	537	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+257	537	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+267	781	7681202914199158	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+783	935	7681202915787865	esp-idf/main/libmain.a	16c7f7bf3462455f
+936	11643	7681203022377884	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+936	11643	7681203022377884	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+11643	12334	7681203029580226	cronometro1erEntrega.elf	339b0aa7a355b7a9
+12335	12775	7681203034167528	.bin_timestamp	eccac8ebdacb8a3a
+12335	12775	7681203034167528	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+12775	12903	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+12775	12903	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+218	453	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+218	453	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+218	453	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+218	453	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+218	453	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+218	453	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+218	453	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+218	453	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+227	661	7681203658668110	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+662	792	7681203659994730	esp-idf/main/libmain.a	16c7f7bf3462455f
+793	10431	7681203755883089	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+793	10431	7681203755883089	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10432	11206	7681203763809535	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11206	11596	7681203767979697	.bin_timestamp	eccac8ebdacb8a3a
+11206	11596	7681203767979697	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11596	11715	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11596	11715	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+202	448	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+202	448	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+202	448	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+202	448	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+202	448	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+202	448	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+202	448	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+202	448	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+211	642	7681204126567240	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+643	782	7681204127977227	esp-idf/main/libmain.a	16c7f7bf3462455f
+782	10550	7681204225093132	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+782	10550	7681204225093132	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10550	11379	7681204233601843	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11380	11772	7681204237858297	.bin_timestamp	eccac8ebdacb8a3a
+11380	11772	7681204237858297	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11772	11900	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11772	11900	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+192	437	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+192	437	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+192	437	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+192	437	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+192	437	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+192	437	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+192	437	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+192	437	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+202	636	7681204706559076	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+637	773	7681204707933557	esp-idf/main/libmain.a	16c7f7bf3462455f
+773	10751	7681204807304826	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+773	10751	7681204807304826	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10751	11601	7681204815878885	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11602	12014	7681204820337535	.bin_timestamp	eccac8ebdacb8a3a
+11602	12014	7681204820337535	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+12015	12140	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+12015	12140	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+181	428	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+181	428	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+181	428	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+181	428	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+181	428	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+181	428	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+181	428	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+181	428	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+190	634	7681205190159643	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+635	779	7681205191667340	esp-idf/main/libmain.a	16c7f7bf3462455f
+779	10688	7681205290267828	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+779	10688	7681205290267828	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10689	11361	7681205297194978	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11361	11939	7681205303239580	.bin_timestamp	eccac8ebdacb8a3a
+11361	11939	7681205303239580	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11939	12056	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11939	12056	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+186	433	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+186	433	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+186	433	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+186	433	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+186	433	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+186	433	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+186	433	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+186	433	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+196	621	7681205595790758	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+623	772	7681205597279706	esp-idf/main/libmain.a	16c7f7bf3462455f
+772	11373	7681205702119768	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+772	11373	7681205702119768	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+11374	12436	7681205713666496	cronometro1erEntrega.elf	339b0aa7a355b7a9
+12436	12803	7681205717594676	.bin_timestamp	eccac8ebdacb8a3a
+12436	12803	7681205717594676	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+12803	12926	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+12803	12926	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+233	480	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+233	480	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+233	480	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+233	480	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+233	480	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+233	480	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+233	480	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+233	480	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+244	689	7681206014757984	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+690	831	7681206016186016	esp-idf/main/libmain.a	16c7f7bf3462455f
+831	10291	7681206110289414	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+831	10291	7681206110289414	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10291	11042	7681206117968353	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11043	11469	7681206122517230	.bin_timestamp	eccac8ebdacb8a3a
+11043	11469	7681206122517230	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11469	11621	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11469	11621	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+156	355	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+156	355	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+156	355	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+156	355	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+156	355	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+156	355	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+156	355	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+156	355	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+166	502	7681206534413135	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+504	665	7681206536026317	esp-idf/main/libmain.a	16c7f7bf3462455f
+665	9893	7681206627687357	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+665	9893	7681206627687357	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+9893	10550	7681206634586480	cronometro1erEntrega.elf	339b0aa7a355b7a9
+10551	10996	7681206639267450	.bin_timestamp	eccac8ebdacb8a3a
+10551	10996	7681206639267450	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+10997	11151	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+10997	11151	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+214	499	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+214	499	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+214	499	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+214	499	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+214	499	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+214	499	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+214	499	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+214	499	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+224	731	7681206957096695	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+732	879	7681206958586944	esp-idf/main/libmain.a	16c7f7bf3462455f
+880	10775	7681207057030111	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+880	10775	7681207057030111	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10775	11640	7681207065877151	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11641	12012	7681207069886533	.bin_timestamp	eccac8ebdacb8a3a
+11641	12012	7681207069886533	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+12012	12139	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+12012	12139	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+182	440	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+182	440	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+182	440	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+182	440	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+182	440	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+182	440	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+182	440	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+182	440	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+191	684	7681207374167641	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+686	825	7681207375582402	esp-idf/main/libmain.a	16c7f7bf3462455f
+825	10514	7681207471989142	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+825	10514	7681207471989142	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10514	11246	7681207479480178	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11247	11680	7681207484099094	.bin_timestamp	eccac8ebdacb8a3a
+11247	11680	7681207484099094	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11681	11814	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11681	11814	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+173	395	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+173	395	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+173	395	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+173	395	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+173	395	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+173	395	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+173	395	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+173	395	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+183	555	7681207897659454	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+556	686	7681207898962903	esp-idf/main/libmain.a	16c7f7bf3462455f
+686	10183	7681207993520523	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+686	10183	7681207993520523	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10183	10934	7681208001087577	cronometro1erEntrega.elf	339b0aa7a355b7a9
+10935	11445	7681208006492274	.bin_timestamp	eccac8ebdacb8a3a
+10935	11445	7681208006492274	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11445	11596	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11445	11596	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+204	460	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+204	460	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+204	460	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+204	460	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+204	460	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+204	460	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+204	460	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+204	460	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+213	677	7681208329667785	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+679	825	7681208331166165	esp-idf/main/libmain.a	16c7f7bf3462455f
+826	10773	7681208430233822	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+826	10773	7681208430233822	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10773	11503	7681208437666616	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11503	11903	7681208441878797	.bin_timestamp	eccac8ebdacb8a3a
+11503	11903	7681208441878797	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11904	12033	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11904	12033	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+191	431	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+191	431	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+191	431	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+191	431	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+191	431	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+191	431	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+191	431	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+191	431	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+200	643	7681208858789984	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+644	794	7681208860300241	esp-idf/main/libmain.a	16c7f7bf3462455f
+794	10606	7681208957925708	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+794	10606	7681208957925708	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+10606	11300	7681208965069825	cronometro1erEntrega.elf	339b0aa7a355b7a9
+11301	11789	7681208970222318	.bin_timestamp	eccac8ebdacb8a3a
+11301	11789	7681208970222318	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+11789	11919	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+11789	11919	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+207	534	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+207	534	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+207	534	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+207	534	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+207	534	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+207	534	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+207	534	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+207	534	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+219	727	7681209455827457	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+728	907	7681209457626025	esp-idf/main/libmain.a	16c7f7bf3462455f
+907	11439	7681209562510305	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+907	11439	7681209562510305	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+11440	12168	7681209569902735	cronometro1erEntrega.elf	339b0aa7a355b7a9
+12169	12550	7681209574076990	.bin_timestamp	eccac8ebdacb8a3a
+12169	12550	7681209574076990	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+12550	12688	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+12550	12688	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+203	471	7681106764730681	bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+203	471	7681106764730681	bootloader/bootloader.elf	9c99828f0f290a77
+203	471	7681106764730681	bootloader/bootloader.bin	9c99828f0f290a77
+203	471	7681106764730681	bootloader/bootloader.map	9c99828f0f290a77
+203	471	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	9c99828f0f290a77
+203	471	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.elf	9c99828f0f290a77
+203	471	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.bin	9c99828f0f290a77
+203	471	7681106764730681	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/bootloader.map	9c99828f0f290a77
+214	703	7681210194776992	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	562641c3e0cb1d9d
+705	862	7681210196370679	esp-idf/main/libmain.a	16c7f7bf3462455f
+862	12231	7681210309589149	esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+862	12231	7681210309589149	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esp_system/ld/sections.ld	4611754b2b15bf9
+12231	13435	7681210321951565	cronometro1erEntrega.elf	339b0aa7a355b7a9
+13436	13848	7681210326209712	.bin_timestamp	eccac8ebdacb8a3a
+13436	13848	7681210326209712	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/.bin_timestamp	eccac8ebdacb8a3a
+13848	13980	0	esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5
+13848	13980	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	524c868b1aca2ef5

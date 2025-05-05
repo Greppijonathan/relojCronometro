@@ -15,8 +15,8 @@ valores y tambien parciales si se mantiene presionado - TECLA 3: Captura de valo
 #include "cronometro.h"
 #include "esp_log.h"
 
-#define DIGITO_ANCHO 50
-#define DIGITO_ALTO 90
+#define DIGITO_ANCHO 40
+#define DIGITO_ALTO 80
 #define DIGITO_ENCENDIDO ILI9341_BLUE2
 #define DIGITO_APAGADO 0x3800
 #define DIGITO_FONDO ILI9341_BLACK
@@ -164,32 +164,46 @@ void actualizarPantalla(void *p)
     TickType_t xLastWakeTime = xTaskGetTickCount();
     ILI9341Init();
     ILI9341Rotate(ILI9341_Landscape_1);
+    panel_t PanelHoras = CrearPanel(11, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelMinutos = CrearPanel(115, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelSegundos = CrearPanel(225, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
-    panel_t PanelMinutos = CrearPanel(5, 180, 2, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t PanelSegundos = CrearPanel(80, 180, 2, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t PanelDecimas = CrearPanel(155, 180, 1, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    ILI9341DrawCircle(103, 25, 3, DIGITO_ENCENDIDO);
+    ILI9341DrawCircle(103, 55, 3, DIGITO_ENCENDIDO);
+    ILI9341DrawCircle(210, 25, 3, DIGITO_ENCENDIDO);
+    ILI9341DrawCircle(210, 55, 3, DIGITO_ENCENDIDO);
+    //   ILI9341DrawString(95, 110, "-", &font_11x18, DIGITO_ENCENDIDO, DIGITO_FONDO);
+    //   ILI9341DrawString(165, 110, "-", &font_11x18, DIGITO_ENCENDIDO, DIGITO_FONDO);
 
-    panel_t Panelparcial1Minutos = CrearPanel(195, 120, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial1Segundos = CrearPanel(245, 120, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial1Decimas = CrearPanel(295, 120, 1, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelMinutosCron = CrearPanel(5, 180, 2, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelSegundosCron = CrearPanel(80, 180, 2, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelDecimasCron = CrearPanel(155, 180, 1, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
-    panel_t Panelparcial2Minutos = CrearPanel(195, 160, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial2Segundos = CrearPanel(245, 160, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial2Decimas = CrearPanel(295, 160, 1, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    ILI9341DrawFilledCircle(74, 190, 2, DIGITO_ENCENDIDO);
+    ILI9341DrawFilledCircle(74, 221, 2, DIGITO_ENCENDIDO);
+    ILI9341DrawFilledCircle(148, 225, 2, DIGITO_ENCENDIDO);
 
-    panel_t Panelparcial3Minutos = CrearPanel(195, 200, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial3Segundos = CrearPanel(245, 200, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Panelparcial3Decimas = CrearPanel(295, 200, 1, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial1Minutos = CrearPanel(195, 120, 2, 30, 20, ILI9341_PURPLE, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial1Segundos = CrearPanel(245, 120, 2, 30, 20, ILI9341_PURPLE, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial1Decimas = CrearPanel(295, 120, 1, 30, 20, ILI9341_PURPLE, DIGITO_APAGADO, DIGITO_FONDO);
+
+    panel_t Panelparcial2Minutos = CrearPanel(195, 160, 2, 30, 20, ILI9341_CYAN, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial2Segundos = CrearPanel(245, 160, 2, 30, 20, ILI9341_CYAN, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial2Decimas = CrearPanel(295, 160, 1, 30, 20, ILI9341_CYAN, DIGITO_APAGADO, DIGITO_FONDO);
+
+    panel_t Panelparcial3Minutos = CrearPanel(195, 200, 2, 30, 20, ILI9341_GREEN, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial3Segundos = CrearPanel(245, 200, 2, 30, 20, ILI9341_GREEN, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Panelparcial3Decimas = CrearPanel(295, 200, 1, 30, 20, ILI9341_GREEN, DIGITO_APAGADO, DIGITO_FONDO);
 
     //   ILI9341DrawFilledCircle(121, 22, 3, DIGITO_ENCENDIDO);
     //   ILI9341DrawFilledCircle(121, 62, 3, DIGITO_ENCENDIDO);
     //   ILI9341DrawFilledCircle(244, 80, 3, DIGITO_ENCENDIDO);
 
-    DibujarDigito(PanelMinutos, 0, 0);
-    DibujarDigito(PanelMinutos, 1, 0);
-    DibujarDigito(PanelSegundos, 0, 0);
-    DibujarDigito(PanelSegundos, 1, 0);
-    DibujarDigito(PanelDecimas, 0, 0);
+    DibujarDigito(PanelMinutosCron, 0, 0);
+    DibujarDigito(PanelMinutosCron, 1, 0);
+    DibujarDigito(PanelSegundosCron, 0, 0);
+    DibujarDigito(PanelSegundosCron, 1, 0);
+    DibujarDigito(PanelDecimasCron, 0, 0);
 
     digitos_t digitosPrevios = {-1, -1, -1, -1, -1};
     digitos_t parcialesPanel1 = {-1, -1, -1, -1, -1};
@@ -204,15 +218,15 @@ void actualizarPantalla(void *p)
             {
 
                 if (digitosActuales.decenasMinutos != digitosPrevios.decenasMinutos)
-                    DibujarDigito(PanelMinutos, 0, digitosActuales.decenasMinutos);
+                    DibujarDigito(PanelMinutosCron, 0, digitosActuales.decenasMinutos);
                 if (digitosActuales.unidadesMinutos != digitosPrevios.unidadesMinutos)
-                    DibujarDigito(PanelMinutos, 1, digitosActuales.unidadesMinutos);
+                    DibujarDigito(PanelMinutosCron, 1, digitosActuales.unidadesMinutos);
                 if (digitosActuales.decenasSegundos != digitosPrevios.decenasSegundos)
-                    DibujarDigito(PanelSegundos, 0, digitosActuales.decenasSegundos);
+                    DibujarDigito(PanelSegundosCron, 0, digitosActuales.decenasSegundos);
                 if (digitosActuales.unidadesSegundos != digitosPrevios.unidadesSegundos)
-                    DibujarDigito(PanelSegundos, 1, digitosActuales.unidadesSegundos);
+                    DibujarDigito(PanelSegundosCron, 1, digitosActuales.unidadesSegundos);
                 if (digitosActuales.decimasSegundo != digitosPrevios.decimasSegundo)
-                    DibujarDigito(PanelDecimas, 0, digitosActuales.decimasSegundo);
+                    DibujarDigito(PanelDecimasCron, 0, digitosActuales.decimasSegundo);
 
                 digitosPrevios = digitosActuales;
 
