@@ -34,8 +34,7 @@ typedef enum
     PAUSAR,
     REINICIAR,
     REINICIARTODO,
-    PARCIAL,
-    MODO_RELOJ
+    PARCIAL
 } estadosCronometro_t;
 
 void leerBotones(void *p)
@@ -49,42 +48,24 @@ void leerBotones(void *p)
     bool estadoanteriorPausa = true;
     bool estadoanteriorReiniciar = true;
     bool estadoanteriorTiempoParcial = true;
-    TickType_t tiempoPresionadoPausa = 0;
     TickType_t tiempoPresionadoReiniciar = 0;
 
     while (1)
     {
-        // --- TEC1: PAUSAR / DETECCIÓN DE PRESIÓN PROLONGADA ---
-        if (gpio_get_level(TEC1_Pausa) == 0)
-        {
-            if (estadoanteriorPausa)
-            {
-                tiempoPresionadoPausa = xTaskGetTickCount(); // Registrar el tiempo de inicio
-                estadoanteriorPausa = false;
-            }
-            else if ((xTaskGetTickCount() - tiempoPresionadoPausa) > pdMS_TO_TICKS(2000)) // Más de 2 segundos
-            {
-                estadosCronometro_t evento = MODO_RELOJ; // Nuevo evento para cambiar a modo reloj
-                xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
 
-                ESP_LOGI("BOTONES", "⏱ Cambio a MODO RELOJ");
-                tiempoPresionadoPausa = 0;
-                vTaskDelay(pdMS_TO_TICKS(500));
-            }
-        }
-        else
+        if ((gpio_get_level(TEC1_Pausa) == 0) && estadoanteriorPausa)
         {
-            if (!estadoanteriorPausa && tiempoPresionadoPausa > 0 &&
-                (xTaskGetTickCount() - tiempoPresionadoPausa) <= pdMS_TO_TICKS(2000))
-            {
-                estadosCronometro_t evento = PAUSAR;
-                xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
-            }
-            tiempoPresionadoPausa = 0;
+            estadosCronometro_t evento = PAUSAR;
+            xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
+            flagPausa = !flagPausa;
+            estadoanteriorPausa = false;
+            vTaskDelay(pdMS_TO_TICKS(100));
+        }
+        else if (gpio_get_level(TEC1_Pausa) != 0)
+        {
             estadoanteriorPausa = true;
         }
 
-        // --- TEC2: REINICIAR / REINICIAR TODO ---
         if (gpio_get_level(TEC2_Reiniciar) == 0)
         {
             if (estadoanteriorReiniciar)
@@ -92,11 +73,10 @@ void leerBotones(void *p)
                 tiempoPresionadoReiniciar = xTaskGetTickCount();
                 estadoanteriorReiniciar = false;
             }
-            else if ((xTaskGetTickCount() - tiempoPresionadoReiniciar) > pdMS_TO_TICKS(2000)) // Más de 2 segundos
+            else if ((xTaskGetTickCount() - tiempoPresionadoReiniciar) > pdMS_TO_TICKS(2000))
             {
                 estadosCronometro_t evento = REINICIARTODO;
                 xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
-                ESP_LOGI("BOTONES", "🔄 REINICIAR TODO");
                 tiempoPresionadoReiniciar = 0;
                 vTaskDelay(pdMS_TO_TICKS(100));
             }
@@ -108,19 +88,16 @@ void leerBotones(void *p)
             {
                 estadosCronometro_t evento = REINICIAR;
                 xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
-                ESP_LOGI("BOTONES", "🔄 REINICIAR");
             }
             tiempoPresionadoReiniciar = 0;
             estadoanteriorReiniciar = true;
         }
 
-        // --- TEC3: TIEMPO PARCIAL ---
         if ((gpio_get_level(TEC3_Parcial) == 0) && estadoanteriorTiempoParcial)
         {
             estadosCronometro_t evento = PARCIAL;
             xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
             flagParcial = true;
-            ESP_LOGI("BOTONES", "⏳ Tiempo Parcial Registrado");
             estadoanteriorTiempoParcial = false;
             vTaskDelay(pdMS_TO_TICKS(100));
         }
@@ -169,23 +146,6 @@ void manejoEstadosCronometro(void *p)
             case PARCIAL:
                 xQueueSend(colaDigitosParciales, &digitosActuales, portMAX_DELAY);
                 break;
-            case MODO_RELOJ:
-                // Vaciar las colas antes de reiniciar los valores
-                xQueueReset(colaDigitos);
-                xQueueReset(colaDigitosParciales);
-
-                // Reiniciar los valores de los dígitos
-                digitosActuales = (digitos_t){0, 0, 0, 0, 0};
-                enPausa = true;
-                xQueueSend(colaDigitos, &digitosActuales, portMAX_DELAY);
-
-                digitosParciales = (digitos_t){0, 0, 0, 0, 0};
-                xQueueSend(colaDigitosParciales, &digitosParciales, portMAX_DELAY);
-
-                ESP_LOGI("CRONOMETRO", "⏱ MODO RELOJ ACTIVADO - Datos de la cola eliminados y dígitos reiniciados");
-                break;
-
-                break;
             }
         }
 
@@ -205,9 +165,9 @@ void actualizarPantalla(void *p)
     ILI9341Init();
     ILI9341Rotate(ILI9341_Landscape_1);
 
-    panel_t PanelMinutos = CrearPanel(12, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t PanelSegundos = CrearPanel(132, 0, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t PanelDecimas = CrearPanel(252, 0, 1, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelMinutos = CrearPanel(5, 180, 2, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelSegundos = CrearPanel(80, 180, 2, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t PanelDecimas = CrearPanel(155, 180, 1, 50, 30, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
     panel_t Panelparcial1Minutos = CrearPanel(195, 120, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
     panel_t Panelparcial1Segundos = CrearPanel(245, 120, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
@@ -221,9 +181,9 @@ void actualizarPantalla(void *p)
     panel_t Panelparcial3Segundos = CrearPanel(245, 200, 2, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
     panel_t Panelparcial3Decimas = CrearPanel(295, 200, 1, 30, 20, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
-    ILI9341DrawFilledCircle(121, 22, 3, DIGITO_ENCENDIDO);
-    ILI9341DrawFilledCircle(121, 62, 3, DIGITO_ENCENDIDO);
-    ILI9341DrawFilledCircle(244, 80, 3, DIGITO_ENCENDIDO);
+    //   ILI9341DrawFilledCircle(121, 22, 3, DIGITO_ENCENDIDO);
+    //   ILI9341DrawFilledCircle(121, 62, 3, DIGITO_ENCENDIDO);
+    //   ILI9341DrawFilledCircle(244, 80, 3, DIGITO_ENCENDIDO);
 
     DibujarDigito(PanelMinutos, 0, 0);
     DibujarDigito(PanelMinutos, 1, 0);
