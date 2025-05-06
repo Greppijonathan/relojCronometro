@@ -42,6 +42,12 @@ panel_t PanelHorasAlarma, PanelMinutosAlarma;
 static int alarmaHoras = 12;
 static int alarmaMinutos = 1;
 
+bool modoAjusteAlarma = false;
+int modoConfig = -1;
+bool modoAjusteReloj = false;
+bool alarmaActivada = false;
+static const char *TAG = "RTC";
+
 /******************** FUNCIONES ***************************************/
 void inicializarPantallaCronometro()
 {
@@ -314,7 +320,27 @@ void actualizarPantallaReloj(void *p)
     }
 }
 
-void leerBotones(void *p)
+void verificarAlarma(void *p)
+{
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+    time_t now;
+    struct tm timeinfo;
+
+    while (true)
+    {
+        time(&now);
+        localtime_r(&now, &timeinfo);
+
+        if (timeinfo.tm_hour == alarmaHoras && timeinfo.tm_min == alarmaMinutos && timeinfo.tm_sec == 0)
+        {
+            ESP_LOGI("ALARMA", "❗ ALARMA ACTIVADA! Son las %02d:%02d:%02d", timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec);
+            alarmaActivada = true;
+            PrenderLedAzul(true);
+        }
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
+    }
+}
+void leerBotonesCronometro(void *p)
 {
 
     bool estadoanteriorPausa = true;
@@ -398,6 +424,160 @@ void leerBotones(void *p)
         vTaskDelay(pdMS_TO_TICKS(50));
     }
 }
+void ajustarRelojTeclado(void *p)
+{
+
+    struct tm timeinfo;
+    time_t t;
+    bool modoAjusteReloj = false;
+    TickType_t tiempoInicioPresionado = 0;
+
+    while (1)
+    {
+        if (!gpio_get_level(TEC4_Config))
+        {
+            if (tiempoInicioPresionado == 0)
+            {
+                tiempoInicioPresionado = xTaskGetTickCount();
+            }
+            else if ((xTaskGetTickCount() - tiempoInicioPresionado) >= pdMS_TO_TICKS(2000))
+            {
+                modoAjusteReloj = false;
+                modoAjusteAlarma = false;
+                ESP_LOGI("CONFIG", "✅ Alarma configurada! en %02d:%02d", alarmaHoras, alarmaMinutos);
+                tiempoInicioPresionado = 0;
+                vTaskDelay(pdMS_TO_TICKS(500));
+            }
+        }
+        else
+        {
+            if (tiempoInicioPresionado != 0)
+            {
+                if (alarmaActivada)
+                {
+                    alarmaActivada = false;
+                    ESP_LOGI("CONFIG", "❌ Alarma desactivada por teclado!");
+                    apagarLeds();
+                }
+                modoConfig = (modoConfig + 1) % 7;
+                modoAjusteReloj = (modoConfig < 5);
+                modoAjusteAlarma = (modoConfig >= 5);
+
+                ESP_LOGI("AJUSTE", "Se ajusta: %s",
+                         (modoConfig == 0) ? "Minutos" : (modoConfig == 1) ? "Horas"
+                                                     : (modoConfig == 2)   ? "Día"
+                                                     : (modoConfig == 3)   ? "Mes"
+                                                     : (modoConfig == 4)   ? "Año"
+                                                     : (modoConfig == 5)   ? "Minutos de la Alarma"
+                                                                           : "Horas de la Alarma");
+
+                tiempoInicioPresionado = 0;
+                vTaskDelay(pdMS_TO_TICKS(300));
+            }
+        }
+
+        if (modoAjusteReloj || modoAjusteAlarma)
+        {
+            if (!gpio_get_level(TEC5_Inc))
+            {
+                time(&t);
+                localtime_r(&t, &timeinfo);
+
+                if (modoAjusteReloj)
+                {
+                    switch (modoConfig)
+                    {
+                    case 0:
+                        timeinfo.tm_min = (timeinfo.tm_min + 1) % 60;
+                        break;
+                    case 1:
+                        timeinfo.tm_hour = (timeinfo.tm_hour + 1) % 24;
+                        break;
+                    case 2:
+                        timeinfo.tm_mday = (timeinfo.tm_mday % 31) + 1;
+                        break;
+                    case 3:
+                        timeinfo.tm_mon = (timeinfo.tm_mon + 1) % 12;
+                        break;
+                    case 4:
+                        timeinfo.tm_year = timeinfo.tm_year + 1;
+                        break;
+                    }
+                    t = mktime(&timeinfo);
+                    struct timeval now = {.tv_sec = t};
+                    settimeofday(&now, NULL);
+
+                    ESP_LOGI("CONFIG", "Hora %02d, Minuto %02d, fecha %02d/%02d/%04d, alarma %02d:%02d",
+                             timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_mday, timeinfo.tm_mon + 1,
+                             timeinfo.tm_year + 1900, alarmaHoras, alarmaMinutos);
+                }
+                else
+                {
+                    if (modoConfig == 5)
+                        alarmaMinutos = (alarmaMinutos + 1) % 60;
+                    if (modoConfig == 6)
+                        alarmaHoras = (alarmaHoras + 1) % 24;
+
+                    ESP_LOGI("CONFIG", "Hora %02d, Minuto %02d, fecha %02d/%02d/%04d, alarma %02d:%02d",
+                             timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_mday, timeinfo.tm_mon + 1,
+                             timeinfo.tm_year + 1900, alarmaHoras, alarmaMinutos);
+                }
+
+                vTaskDelay(pdMS_TO_TICKS(300));
+            }
+
+            if (!gpio_get_level(TEC6_Dec))
+            {
+                time(&t);
+                localtime_r(&t, &timeinfo);
+
+                if (modoAjusteReloj)
+                {
+                    switch (modoConfig)
+                    {
+                    case 0:
+                        timeinfo.tm_min = (timeinfo.tm_min == 0 ? 59 : timeinfo.tm_min - 1);
+                        break;
+                    case 1:
+                        timeinfo.tm_hour = (timeinfo.tm_hour == 0 ? 23 : timeinfo.tm_hour - 1);
+                        break;
+                    case 2:
+                        timeinfo.tm_mday = (timeinfo.tm_mday == 1 ? 31 : timeinfo.tm_mday - 1);
+                        break;
+                    case 3:
+                        timeinfo.tm_mon = (timeinfo.tm_mon == 0 ? 11 : timeinfo.tm_mon - 1);
+                        break;
+                    case 4:
+                        timeinfo.tm_year = timeinfo.tm_year - 1;
+                        break;
+                    }
+                    t = mktime(&timeinfo);
+                    struct timeval now = {.tv_sec = t};
+                    settimeofday(&now, NULL);
+
+                    ESP_LOGI("CONFIG", "Hora %02d, Minuto %02d, fecha %02d/%02d/%04d, alarma %02d:%02d",
+                             timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_mday, timeinfo.tm_mon + 1,
+                             timeinfo.tm_year + 1900, alarmaHoras, alarmaMinutos);
+                }
+                else
+                {
+                    if (modoConfig == 5)
+                        alarmaMinutos = (alarmaMinutos == 0 ? 59 : alarmaMinutos - 1);
+                    if (modoConfig == 6)
+                        alarmaHoras = (alarmaHoras == 0 ? 23 : alarmaHoras - 1);
+
+                    ESP_LOGI("CONFIG", "Hora %02d, Minuto %02d, fecha %02d/%02d/%04d, alarma %02d:%02d",
+                             timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_mday, timeinfo.tm_mon + 1,
+                             timeinfo.tm_year + 1900, alarmaHoras, alarmaMinutos);
+                }
+
+                vTaskDelay(pdMS_TO_TICKS(300));
+            }
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(50));
+    }
+}
 
 void app_main()
 {
@@ -414,7 +594,10 @@ void app_main()
     configuracion_pin_t configuraciones[] = {
         {TEC1_Pausa, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY},
         {TEC2_Reiniciar, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY},
-        {TEC3_Parcial, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY}};
+        {TEC3_Parcial, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY},
+        {TEC4_Config, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY},
+        {TEC5_Inc, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY},
+        {TEC6_Dec, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY}};
 
     ConfigurarTeclas(configuraciones, sizeof(configuraciones) / sizeof(configuraciones[0]));
     struct tm timeinfo = {
@@ -429,9 +612,11 @@ void app_main()
     struct timeval now = {.tv_sec = t};
     settimeofday(&now, NULL);
 
-    xTaskCreate(leerBotones, "LecturaBotonera", 2048, NULL, 3, NULL);
-    xTaskCreate(manejoEstadosCronometro, "Tiempo100ms", 2048, NULL, 4, NULL);
-    xTaskCreate(actualizarPantallaCronometro, "ActualizarPantalla", 4096, NULL, 2, NULL);
-    xTaskCreate(actualizarPantallaReloj, "ActualizarPantallaReloj", 4096, NULL, 1, NULL);
+    xTaskCreate(leerBotonesCronometro, "Control Cronometro", 2048, NULL, 4, NULL);
+    xTaskCreate(manejoEstadosCronometro, "Tiempo 100ms", 2048, NULL, 5, NULL);
+    xTaskCreate(actualizarPantallaCronometro, "Informacion Cronometro Parciales", 4096, NULL, 2, NULL);
+    xTaskCreate(actualizarPantallaReloj, "Informacion Fecha Hora Alarma", 2048, NULL, 1, NULL);
+    xTaskCreate(ajustarRelojTeclado, "Ajustes reloj alarma", 2048, NULL, 3, NULL);
+    xTaskCreate(verificarAlarma, "Verificar si se debe disparar Alarma", 2048, NULL, 1, NULL);
     //    xTaskCreate(manejoLedRGB, "LedsTestigos", 4096, NULL, 1, NULL);
 }
