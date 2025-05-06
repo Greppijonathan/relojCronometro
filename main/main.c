@@ -1,6 +1,5 @@
 /*
-Se implementa >>> TECLA 1: Inicio del cronometro - TECLA 2: Reset del cronometro si se presiona una vez, de los
-valores y tambien parciales si se mantiene presionado - TECLA 3: Captura de valores parciales (3 en total).
+
 */
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
@@ -107,79 +106,6 @@ typedef enum
     REINICIARTODO,
     PARCIAL
 } estadosCronometro_t;
-
-void leerBotones(void *p)
-{
-    configuracion_pin_t configuraciones[] = {
-        {TEC1_Pausa, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY},
-        {TEC2_Reiniciar, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY},
-        {TEC3_Parcial, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY}};
-    ConfigurarTeclas(configuraciones, sizeof(configuraciones) / sizeof(configuraciones[0]));
-
-    bool estadoanteriorPausa = true;
-    bool estadoanteriorReiniciar = true;
-    bool estadoanteriorTiempoParcial = true;
-    TickType_t tiempoPresionadoReiniciar = 0;
-
-    while (1)
-    {
-
-        if ((gpio_get_level(TEC1_Pausa) == 0) && estadoanteriorPausa)
-        {
-            estadosCronometro_t evento = PAUSAR;
-            xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
-            flagPausa = !flagPausa;
-            estadoanteriorPausa = false;
-            vTaskDelay(pdMS_TO_TICKS(100));
-        }
-        else if (gpio_get_level(TEC1_Pausa) != 0)
-        {
-            estadoanteriorPausa = true;
-        }
-
-        if (gpio_get_level(TEC2_Reiniciar) == 0)
-        {
-            if (estadoanteriorReiniciar)
-            {
-                tiempoPresionadoReiniciar = xTaskGetTickCount();
-                estadoanteriorReiniciar = false;
-            }
-            else if ((xTaskGetTickCount() - tiempoPresionadoReiniciar) > pdMS_TO_TICKS(2000))
-            {
-                estadosCronometro_t evento = REINICIARTODO;
-                xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
-                tiempoPresionadoReiniciar = 0;
-                vTaskDelay(pdMS_TO_TICKS(100));
-            }
-        }
-        else
-        {
-            if (!estadoanteriorReiniciar && tiempoPresionadoReiniciar > 0 &&
-                (xTaskGetTickCount() - tiempoPresionadoReiniciar) <= pdMS_TO_TICKS(2000))
-            {
-                estadosCronometro_t evento = REINICIAR;
-                xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
-            }
-            tiempoPresionadoReiniciar = 0;
-            estadoanteriorReiniciar = true;
-        }
-
-        if ((gpio_get_level(TEC3_Parcial) == 0) && estadoanteriorTiempoParcial)
-        {
-            estadosCronometro_t evento = PARCIAL;
-            xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
-            flagParcial = true;
-            estadoanteriorTiempoParcial = false;
-            vTaskDelay(pdMS_TO_TICKS(100));
-        }
-        else if (gpio_get_level(TEC3_Parcial) != 0)
-        {
-            estadoanteriorTiempoParcial = true;
-        }
-
-        vTaskDelay(pdMS_TO_TICKS(50));
-    }
-}
 
 void manejoEstadosCronometro(void *p)
 {
@@ -387,6 +313,114 @@ void actualizarPantallaReloj(void *p)
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(250));
     }
 }
+
+void leerBotones(void *p)
+{
+    configuracion_pin_t configuraciones[] = {
+        {TEC1_Pausa, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY},
+        {TEC2_Reiniciar, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY},
+        {TEC3_Parcial, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY}};
+
+    ConfigurarTeclas(configuraciones, sizeof(configuraciones) / sizeof(configuraciones[0]));
+
+    bool estadoanteriorPausa, presionePausa = true;
+    bool estadoanteriorReiniciar, presioneReiniciar = true;
+    bool estadoanteriorTiempoParcial, presioneTiempoParcial = true;
+
+    TickType_t tiempoPresionadoPausa = 0;
+    TickType_t tiempoPresionadoReiniciar = 0;
+    TickType_t tiempoPresionadoParcial = 0;
+
+    while (1)
+    {
+        if ((gpio_get_level(TEC1_Pausa) == 0) && (estadoanteriorPausa))
+        {
+            tiempoPresionadoPausa = xTaskGetTickCount();
+            estadoanteriorPausa = false;
+            presionePausa = true;
+            while (gpio_get_level(TEC1_Pausa) == 0)
+            {
+                vTaskDelay(pdMS_TO_TICKS(10));
+            }
+            estadoanteriorPausa = true;
+            if (presionePausa && (xTaskGetTickCount() - tiempoPresionadoPausa) < pdMS_TO_TICKS(2000))
+            {
+                estadosCronometro_t evento = PAUSAR;
+                xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
+                presionePausa = false;
+                ESP_LOGI("BOTON", "TEC1_Pausa");
+                ESP_LOGI("TIEMPO", "%lu", (xTaskGetTickCount() - tiempoPresionadoPausa) * portTICK_PERIOD_MS);
+                ESP_LOGI("INFO", "PAUSAR");
+                ESP_LOGI("", "************************************");
+            }
+            if (presionePausa && (xTaskGetTickCount() - tiempoPresionadoPausa) > pdMS_TO_TICKS(2000))
+            {
+                //
+                //    Informarlo en la cola
+                //
+                ESP_LOGI("BOTON", "TEC1_Pausa");
+                ESP_LOGI("TIEMPO", "%lu", (xTaskGetTickCount() - tiempoPresionadoPausa) * portTICK_PERIOD_MS);
+                ESP_LOGI("INFO", "AJUSTE RELOJ");
+                ESP_LOGI("", "************************************");
+            }
+        }
+
+        if ((gpio_get_level(TEC2_Reiniciar) == 0) && (estadoanteriorReiniciar))
+        {
+            tiempoPresionadoReiniciar = xTaskGetTickCount();
+            estadoanteriorReiniciar = false;
+            presioneReiniciar = true;
+            while (gpio_get_level(TEC2_Reiniciar) == 0)
+            {
+                vTaskDelay(pdMS_TO_TICKS(10));
+            }
+            estadoanteriorReiniciar = true;
+
+            if (presioneReiniciar && (xTaskGetTickCount() - tiempoPresionadoReiniciar) < pdMS_TO_TICKS(2000))
+            {
+                estadosCronometro_t evento = REINICIAR;
+                xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
+
+                presioneReiniciar = false;
+
+                ESP_LOGI("BOTON", "TEC2_Reiniciar");
+                ESP_LOGI("TIEMPO", "%lu", (xTaskGetTickCount() - tiempoPresionadoReiniciar) * portTICK_PERIOD_MS);
+                ESP_LOGI("INFO", "REINICIE SOLO CRONOMETRO");
+                ESP_LOGI("", "************************************");
+            }
+            if ((xTaskGetTickCount() - tiempoPresionadoReiniciar) > pdMS_TO_TICKS(2000))
+            {
+                estadosCronometro_t evento = REINICIARTODO;
+                xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
+                presioneReiniciar = false;
+
+                ESP_LOGI("BOTON", "TEC2_Reiniciar");
+                ESP_LOGI("TIEMPO", "%lu", (xTaskGetTickCount() - tiempoPresionadoReiniciar) * portTICK_PERIOD_MS);
+                ESP_LOGI("INFO", "REINICIE PARCIALES Y CRONOMETRO");
+                ESP_LOGI("", "************************************");
+            }
+        }
+        if ((gpio_get_level(TEC3_Parcial) == 0) && (estadoanteriorTiempoParcial))
+        {
+            tiempoPresionadoParcial = xTaskGetTickCount();
+            estadoanteriorTiempoParcial = false;
+            presioneTiempoParcial = true;
+            while (gpio_get_level(TEC3_Parcial) == 0)
+            {
+                vTaskDelay(pdMS_TO_TICKS(10));
+            }
+            estadoanteriorTiempoParcial = true;
+            estadosCronometro_t evento = PARCIAL;
+            xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
+            ESP_LOGI("BOTON", "TEC3_Parcial");
+            ESP_LOGI("TIEMPO", "%lu", (xTaskGetTickCount() - tiempoPresionadoParcial) * portTICK_PERIOD_MS);
+            ESP_LOGI("INFO", "CAPTURE PARCIAL");
+            ESP_LOGI("", "************************************");
+        }
+        vTaskDelay(pdMS_TO_TICKS(50));
+    }
+}
+
 void app_main()
 {
     ConfigurarSalidasLed();
