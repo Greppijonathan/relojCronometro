@@ -316,16 +316,10 @@ void actualizarPantallaReloj(void *p)
 
 void leerBotones(void *p)
 {
-    configuracion_pin_t configuraciones[] = {
-        {TEC1_Pausa, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY},
-        {TEC2_Reiniciar, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY},
-        {TEC3_Parcial, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY}};
 
-    ConfigurarTeclas(configuraciones, sizeof(configuraciones) / sizeof(configuraciones[0]));
-
-    bool estadoanteriorPausa, presionePausa = true;
+    bool estadoanteriorPausa = true;
     bool estadoanteriorReiniciar, presioneReiniciar = true;
-    bool estadoanteriorTiempoParcial, presioneTiempoParcial = true;
+    bool estadoanteriorTiempoParcial = true;
 
     TickType_t tiempoPresionadoPausa = 0;
     TickType_t tiempoPresionadoReiniciar = 0;
@@ -337,39 +331,26 @@ void leerBotones(void *p)
         {
             tiempoPresionadoPausa = xTaskGetTickCount();
             estadoanteriorPausa = false;
-            presionePausa = true;
             while (gpio_get_level(TEC1_Pausa) == 0)
             {
                 vTaskDelay(pdMS_TO_TICKS(10));
             }
             estadoanteriorPausa = true;
-            if (presionePausa && (xTaskGetTickCount() - tiempoPresionadoPausa) < pdMS_TO_TICKS(2000))
-            {
-                estadosCronometro_t evento = PAUSAR;
-                xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
-                presionePausa = false;
-                ESP_LOGI("BOTON", "TEC1_Pausa");
-                ESP_LOGI("TIEMPO", "%lu", (xTaskGetTickCount() - tiempoPresionadoPausa) * portTICK_PERIOD_MS);
-                ESP_LOGI("INFO", "PAUSAR");
-                ESP_LOGI("", "************************************");
-            }
-            if (presionePausa && (xTaskGetTickCount() - tiempoPresionadoPausa) > pdMS_TO_TICKS(2000))
-            {
-                //
-                //    Informarlo en la cola
-                //
-                ESP_LOGI("BOTON", "TEC1_Pausa");
-                ESP_LOGI("TIEMPO", "%lu", (xTaskGetTickCount() - tiempoPresionadoPausa) * portTICK_PERIOD_MS);
-                ESP_LOGI("INFO", "AJUSTE RELOJ");
-                ESP_LOGI("", "************************************");
-            }
+
+            estadosCronometro_t evento = PAUSAR;
+            xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
+
+            ESP_LOGI("BOTON", "TEC1_Pausa");
+            ESP_LOGI("TIEMPO", "%lu", (xTaskGetTickCount() - tiempoPresionadoPausa) * portTICK_PERIOD_MS);
+            ESP_LOGI("INFO", "PAUSAR");
+            ESP_LOGI("", "************************************");
         }
 
         if ((gpio_get_level(TEC2_Reiniciar) == 0) && (estadoanteriorReiniciar))
         {
             tiempoPresionadoReiniciar = xTaskGetTickCount();
             estadoanteriorReiniciar = false;
-            presioneReiniciar = true;
+
             while (gpio_get_level(TEC2_Reiniciar) == 0)
             {
                 vTaskDelay(pdMS_TO_TICKS(10));
@@ -381,8 +362,6 @@ void leerBotones(void *p)
                 estadosCronometro_t evento = REINICIAR;
                 xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
 
-                presioneReiniciar = false;
-
                 ESP_LOGI("BOTON", "TEC2_Reiniciar");
                 ESP_LOGI("TIEMPO", "%lu", (xTaskGetTickCount() - tiempoPresionadoReiniciar) * portTICK_PERIOD_MS);
                 ESP_LOGI("INFO", "REINICIE SOLO CRONOMETRO");
@@ -392,7 +371,6 @@ void leerBotones(void *p)
             {
                 estadosCronometro_t evento = REINICIARTODO;
                 xQueueSend(colaEstadosCronometro, &evento, portMAX_DELAY);
-                presioneReiniciar = false;
 
                 ESP_LOGI("BOTON", "TEC2_Reiniciar");
                 ESP_LOGI("TIEMPO", "%lu", (xTaskGetTickCount() - tiempoPresionadoReiniciar) * portTICK_PERIOD_MS);
@@ -404,7 +382,7 @@ void leerBotones(void *p)
         {
             tiempoPresionadoParcial = xTaskGetTickCount();
             estadoanteriorTiempoParcial = false;
-            presioneTiempoParcial = true;
+
             while (gpio_get_level(TEC3_Parcial) == 0)
             {
                 vTaskDelay(pdMS_TO_TICKS(10));
@@ -433,6 +411,12 @@ void app_main()
     colaEstadosCronometro = xQueueCreate(5, sizeof(estadosCronometro_t));
     semaforoAccesoDigitos = xSemaphoreCreateMutex();
 
+    configuracion_pin_t configuraciones[] = {
+        {TEC1_Pausa, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY},
+        {TEC2_Reiniciar, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY},
+        {TEC3_Parcial, GPIO_MODE_INPUT, GPIO_PULLUP_ONLY}};
+
+    ConfigurarTeclas(configuraciones, sizeof(configuraciones) / sizeof(configuraciones[0]));
     struct tm timeinfo = {
         .tm_year = 2025 - 1900,
         .tm_mon = 0,
