@@ -20,4 +20,4 @@ typedef struct
 
 void ConfigurarTeclas(configuracion_pin_t *config, size_t num_pines);
 
-#endif // TECLASCONFIG_H
+#endif
