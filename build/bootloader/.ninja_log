@@ -1,39 +1,39 @@
 # ninja log v5
-131	713	7681106773867068	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/dedic_gpio_periph.c.obj	e5af613d3ed44d6e
-26	749	7681106773328644	project_elf_src_esp32c6.c	69fd151a699b06fc
 110	812	7681106775592681	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/gpio_periph.c.obj	8a15161e5f604f5f
+26	749	7681106773328644	project_elf_src_esp32c6.c	69fd151a699b06fc
+131	713	7681106773867068	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/dedic_gpio_periph.c.obj	e5af613d3ed44d6e
 2009	2680	7681106793659478	esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/esp_bootloader_desc.c.obj	efcb8efe4d1bf9bf
 143	726	7681106774618072	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/spi_periph.c.obj	341ee27c5de31e4e
+97	835	7681106775379085	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/interrupts.c.obj	5d6b33799fcf633e
+116	842	7681106774838582	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/uart_periph.c.obj	ae2cfba864d68931
 26	749	7681106773328644	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/project_elf_src_esp32c6.c	69fd151a699b06fc
 1994	2920	7681106796846904	esp-idf/hal/CMakeFiles/__idf_hal.dir/cache_hal.c.obj	774b74fd4539af9a
-116	842	7681106774838582	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/uart_periph.c.obj	ae2cfba864d68931
-97	835	7681106775379085	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/interrupts.c.obj	5d6b33799fcf633e
 123	756	7681106774787025	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/adc_periph.c.obj	3abe9faa8ac5e4b
 137	796	7681106775395048	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/gdma_periph.c.obj	3c1e1ec9d0799cf1
+4989	5709	7681106823125922	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c6/esp_efuse_utility.c.obj	57f5681525b2a6a4
+4077	4864	7681106815840588	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.obj	d2a3d8544f3efafd
 45	973	7681106776324115	esp-idf/soc/CMakeFiles/__idf_soc.dir/dport_access_common.c.obj	4c9089d0204c0426
 3284	3939	7681106806937371	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.obj	49567059601296cd
-4077	4864	7681106815840588	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.obj	d2a3d8544f3efafd
-4989	5709	7681106823125922	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c6/esp_efuse_utility.c.obj	57f5681525b2a6a4
-39	1012	7681106777434611	esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj	36b606caab8b2db5
 2913	3865	7681106804947117	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj	6fb692a9b3b0e0e7
+39	1012	7681106777434611	esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj	36b606caab8b2db5
+2681	3573	7681106802027413	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj	6ecc9f23b0ce155c
+1846	3246	7681106799606368	esp-idf/hal/CMakeFiles/__idf_hal.dir/mmu_hal.c.obj	c367d4b844a07e22
 9327	9694	7681106864541191	esp-idf/esp_common/libesp_common.a	6dd4f0cbaeb65bbb
 756	1194	7681106779447202	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/rmt_periph.c.obj	c8365a6dbef3966b
-1846	3246	7681106799606368	esp-idf/hal/CMakeFiles/__idf_hal.dir/mmu_hal.c.obj	c367d4b844a07e22
-2681	3573	7681106802027413	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj	6ecc9f23b0ce155c
-749	1249	7681106779628702	CMakeFiles/bootloader.elf.dir/project_elf_src_esp32c6.c.obj	febdda2c2c669356
 2920	4077	7681106806506236	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.obj	ae0ca32056fe6fec
-796	1340	7681106780407955	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/sdm_periph.c.obj	2713b1933330711d
+749	1249	7681106779628702	CMakeFiles/bootloader.elf.dir/project_elf_src_esp32c6.c.obj	febdda2c2c669356
 4740	5358	7681106820456996	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.obj	f8b91da3696f2e65
+796	1340	7681106780407955	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/sdm_periph.c.obj	2713b1933330711d
 726	1347	7681106780525268	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/pcnt_periph.c.obj	6eff204341a7070f
-842	1392	7681106781317274	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/temperature_sensor_periph.c.obj	68f72b1259bfcdcf
 4114	4739	7681106814102847	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32c6/bootloader_sha.c.obj	c1d0260225d32886
+842	1392	7681106781317274	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/temperature_sensor_periph.c.obj	68f72b1259bfcdcf
+4662	5740	7681106824944410	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32c6/bootloader_esp32c6.c.obj	c1dade20a46cc1ea
 812	1399	7681106781495124	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/i2s_periph.c.obj	7faa053646177db6
 1466	2001	7681106787324622	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/system_retention_periph.c.obj	d6e529adc60fde08
-4662	5740	7681106824944410	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32c6/bootloader_esp32c6.c.obj	c1dade20a46cc1ea
 973	1465	7681106781357607	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/timer_periph.c.obj	1f49804385c6cb13
 715	1472	7681106781454335	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/ledc_periph.c.obj	c128b5d8d42bd295
-1012	1491	7681106781704940	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/parlio_periph.c.obj	e73629bfc74e9cb
 3246	3886	7681106806076044	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32c6.c.obj	3a798968c595312c
+1012	1491	7681106781704940	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/parlio_periph.c.obj	e73629bfc74e9cb
 1347	1571	7681106783460940	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/ieee802154_periph.c.obj	44fa4261170826ad
 1249	1633	7681106783647196	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/mpi_periph.c.obj	26059edae76f0aa8
 3939	4732	7681106814773019	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj	66acf8664f7f8596
@@ -41,15 +41,15 @@
 1399	1845	7681106785563235	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/sdio_slave_periph.c.obj	35bbbbb832b1be90
 6874	7697	7681106844108632	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.obj	6b758feb6e62a7a0
 1195	1993	7681106786259363	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/mcpwm_periph.c.obj	e846b55bc83356d0
-1392	2009	7681106787197086	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/rtc_io_periph.c.obj	f6a767f637cd66bf
 4776	5365	7681106820832888	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c6/esp_efuse_table.c.obj	ab2fcb5a81a955d4
-1340	2170	7681106788876120	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/twai_periph.c.obj	41d89c00561a26e
+1392	2009	7681106787197086	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/rtc_io_periph.c.obj	f6a767f637cd66bf
 2633	3283	7681106800304896	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.obj	8933ec8374c253fe
 3276	4776	7681106814435125	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash.c.obj	c79ae32627dbb48e
-1491	2336	7681106789713614	esp-idf/hal/CMakeFiles/__idf_hal.dir/hal_utils.c.obj	1e9c40becffc00ae
+1340	2170	7681106788876120	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/twai_periph.c.obj	41d89c00561a26e
 1473	4113	7681106807865508	esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.obj	b85637f62285e27e
-1571	2359	7681106791157300	esp-idf/hal/CMakeFiles/__idf_hal.dir/efuse_hal.c.obj	ba62fb630d8e23
+1491	2336	7681106789713614	esp-idf/hal/CMakeFiles/__idf_hal.dir/hal_utils.c.obj	1e9c40becffc00ae
 2708	3537	7681106802734734	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse.c.obj	888c4a905dca9462
+1571	2359	7681106791157300	esp-idf/hal/CMakeFiles/__idf_hal.dir/efuse_hal.c.obj	ba62fb630d8e23
 1753	2632	7681106791951271	esp-idf/hal/CMakeFiles/__idf_hal.dir/lp_timer_hal.c.obj	ff8ce770ad3d1613
 1633	2707	7681106793236641	esp-idf/hal/CMakeFiles/__idf_hal.dir/esp32c6/efuse_hal.c.obj	e92296a1da6bad4
 3724	5325	7681106820754020	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj	1539b0e4d4e4c00d
@@ -60,16 +60,16 @@
 2170	3390	7681106801316478	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj	1549698107ed4176
 3573	4625	7681106813425286	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj	64c8118550893561
 3391	4662	7681106813651034	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32c6.c.obj	fc46cad704d46a5f
-3886	4826	7681106815108445	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.obj	b2ebcb849bda5c09
 3865	5201	7681106819149081	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj	c37f778588ea3fc4
+3886	4826	7681106815108445	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.obj	b2ebcb849bda5c09
 3537	4989	7681106817103440	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj	313d33c60696f75d
 4827	5346	7681106820446710	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c6/esp_efuse_fields.c.obj	3a2071b6af00d462
 4625	5467	7681106821058311	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32c6/bootloader_soc.c.obj	3ba6ab8e8c6f989c
 4733	5526	7681106821432837	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32c6/bootloader_ecdsa.c.obj	69fce3ea0e9ada68
 4864	5830	7681106825149506	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c6/esp_efuse_rtc_calib.c.obj	dbe0024d861c6c2f
 5365	5926	7681106825895033	esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_err.c.obj	e24cdb52a4bf0c38
-5201	6090	7681106828014130	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj	e3e79c46ead65644
 6163	7913	7681106846597533	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c6/pmu_sleep.c.obj	e7d155b2085894bc
+5201	6090	7681106828014130	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj	e3e79c46ead65644
 5325	6156	7681106828356565	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj	4cd520a0587aeed2
 5526	6163	7681106827618265	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c6/esp_cpu_intr.c.obj	6e1e702251588f27
 5467	6180	7681106828617698	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu.c.obj	b5a40a4a249429d5
@@ -88,10 +88,10 @@
 6711	7269	7681106839186752	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj	930d2fade986cbc1
 7046	7542	7681106841537336	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_systimer.c.obj	610e03fea18ec1eb
 6944	7651	7681106843835117	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.obj	8d5fb75d60b456db
-7014	7672	7681106844319213	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_hp_regi2c_esp32c6.c.obj	57ee6adade29c5eb
 7535	8256	7681106850016354	esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj	4d0b38c05b04745f
-7223	7675	7681106844538865	esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj	5f9872cd0835d177
+7014	7672	7681106844319213	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_hp_regi2c_esp32c6.c.obj	57ee6adade29c5eb
 10764	11359	7681106880665986	esp-idf/efuse/libefuse.a	5371219c03ab5d49
+7223	7675	7681106844538865	esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj	5f9872cd0835d177
 7004	7851	7681106844827807	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.obj	23bed3289689d7b4
 7269	7912	7681106846705780	esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj	44e5de18bb777eda
 7543	7976	7681106846996378	esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj	440d4c710da723f3
@@ -110,227 +110,45 @@
 14958	15432	7681106922013870	bootloader.elf	6f2ab2aeb115da69
 15433	17164	7681106938815604	.bin_timestamp	a43aa3ffc6026ca1
 15433	17164	7681106938815604	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/.bin_timestamp	a43aa3ffc6026ca1
-65	201	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-65	201	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-45	167	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-45	167	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	133	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	133	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-55	193	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-55	193	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-24	127	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-24	127	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-56	175	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-56	175	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-58	185	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-58	185	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-35	161	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-35	161	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-58	190	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-58	190	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-48	176	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-48	176	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-41	192	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-41	192	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-29	169	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-29	169	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-44	174	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-44	174	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-51	163	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-51	163	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-74	214	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-74	214	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-28	146	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-28	146	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-55	188	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-55	188	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-51	163	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-51	163	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-70	203	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-70	203	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-48	159	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-48	159	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-53	184	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-53	184	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-64	202	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-64	202	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-47	168	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-47	168	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-44	180	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-44	180	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-53	179	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-53	179	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-56	186	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-56	186	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-61	190	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-61	190	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-45	155	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-45	155	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-61	191	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-61	191	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-68	209	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-68	209	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-51	183	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-51	183	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-57	191	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-57	191	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-31	536	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-31	536	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-470	635	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-470	635	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-34	156	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-34	156	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	147	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	147	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-58	194	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-58	194	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-58	198	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-58	198	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-48	161	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-48	161	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-53	209	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-53	209	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-25	151	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-25	151	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	146	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	146	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-35	166	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-35	166	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	145	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	145	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-44	215	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-44	215	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-60	209	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-60	209	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	137	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	137	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-29	144	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-29	144	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-48	160	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-48	160	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	121	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	121	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	144	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	144	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+26	150	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+26	150	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+35	168	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+35	168	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+51	189	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+51	189	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+56	197	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+56	197	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+60	182	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+60	182	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+48	175	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+48	175	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+32	149	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+32	149	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+26	152	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+26	152	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+65	194	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+65	194	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+31	160	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+31	160	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
 24	136	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
 24	136	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	140	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	140	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-22	132	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-22	132	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-22	130	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-22	130	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	111	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	111	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	112	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	112	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	111	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	111	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	109	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	109	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-17	110	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-17	110	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-17	113	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-17	113	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	110	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	110	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	112	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	112	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-30	145	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-30	145	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	117	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	117	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-35	154	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-35	154	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	118	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	118	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-22	121	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-22	121	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-17	125	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-17	125	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-16	110	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-16	110	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	123	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-23	123	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	140	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	140	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-22	138	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-22	138	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	134	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	134	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	119	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	119	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	114	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	114	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	123	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	123	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	110	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	110	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-17	114	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-17	114	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	114	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	114	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	130	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	130	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	115	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	115	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	114	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	114	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	116	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	116	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	110	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	110	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	121	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	121	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	117	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	117	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	127	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	127	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	111	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	111	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-17	115	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-17	115	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	111	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	111	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	111	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	111	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	113	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	113	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	115	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	115	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	115	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	115	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	110	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	110	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	134	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	134	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	123	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-21	123	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	114	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	114	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-17	110	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-17	110	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	114	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	114	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-18	113	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	118	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	118	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	127	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	127	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	112	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-19	112	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	118	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
-20	118	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+36	157	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+36	157	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+61	187	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+61	187	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+52	170	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+52	170	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+45	169	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+45	169	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+48	172	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+48	172	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+63	246	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+63	246	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+42	159	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+42	159	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+67	191	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+67	191	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+47	179	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+47	179	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+59	192	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe
+59	192	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/relojCronometro/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	6ab3269aaf2f0cbe

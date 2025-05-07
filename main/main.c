@@ -1,5 +1,14 @@
 /*
+    if (alarmaConfigurada)
+        {
+            ILI9341DrawString(5, 147, "A.CON>>", &font_11x18, ILI9341_GREEN, ILI9341_BLACK);
+        }
 
+        if (!alarmaConfigurada)
+        {
+            ILI9341DrawString(5, 147, "A.DES>>", &font_11x18, ILI9341_RED, ILI9341_BLACK);
+        }
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(250));
 */
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
@@ -16,8 +25,6 @@
 #include <time.h>
 #include "esp_system.h"
 #include <sys/time.h>
-
-#define DIGITO_FONDO ILI9341_BLACK
 
 QueueHandle_t colaDigitos;
 QueueHandle_t colaEstadosCronometro;
@@ -46,21 +53,21 @@ bool alarmaConfigurada = false;
 
 void inicializarPantallaCronometro()
 {
-    PanelMinutosCron = CrearPanel(5, 180, 2, 50, 30, ILI9341_BLUE2, 0x3800, DIGITO_FONDO);
-    PanelSegundosCron = CrearPanel(80, 180, 2, 50, 30, ILI9341_BLUE2, 0x3800, DIGITO_FONDO);
-    PanelDecimasCron = CrearPanel(155, 180, 1, 50, 30, ILI9341_BLUE2, 0x3800, DIGITO_FONDO);
+    PanelMinutosCron = CrearPanel(5, 180, 2, 50, 30, ILI9341_BLUE2, 0x3800, ILI9341_BLACK);
+    PanelSegundosCron = CrearPanel(80, 180, 2, 50, 30, ILI9341_BLUE2, 0x3800, ILI9341_BLACK);
+    PanelDecimasCron = CrearPanel(155, 180, 1, 50, 30, ILI9341_BLUE2, 0x3800, ILI9341_BLACK);
 
-    Panelparcial1Minutos = CrearPanel(195, 120, 2, 30, 20, ILI9341_PURPLE, 0x3800, DIGITO_FONDO);
-    Panelparcial1Segundos = CrearPanel(245, 120, 2, 30, 20, ILI9341_PURPLE, 0x3800, DIGITO_FONDO);
-    Panelparcial1Decimas = CrearPanel(295, 120, 1, 30, 20, ILI9341_PURPLE, 0x3800, DIGITO_FONDO);
+    Panelparcial1Minutos = CrearPanel(195, 120, 2, 30, 20, ILI9341_PURPLE, 0x3800, ILI9341_BLACK);
+    Panelparcial1Segundos = CrearPanel(245, 120, 2, 30, 20, ILI9341_PURPLE, 0x3800, ILI9341_BLACK);
+    Panelparcial1Decimas = CrearPanel(295, 120, 1, 30, 20, ILI9341_PURPLE, 0x3800, ILI9341_BLACK);
 
-    Panelparcial2Minutos = CrearPanel(195, 160, 2, 30, 20, ILI9341_CYAN, 0x3800, DIGITO_FONDO);
-    Panelparcial2Segundos = CrearPanel(245, 160, 2, 30, 20, ILI9341_CYAN, 0x3800, DIGITO_FONDO);
-    Panelparcial2Decimas = CrearPanel(295, 160, 1, 30, 20, ILI9341_CYAN, 0x3800, DIGITO_FONDO);
+    Panelparcial2Minutos = CrearPanel(195, 160, 2, 30, 20, ILI9341_CYAN, 0x3800, ILI9341_BLACK);
+    Panelparcial2Segundos = CrearPanel(245, 160, 2, 30, 20, ILI9341_CYAN, 0x3800, ILI9341_BLACK);
+    Panelparcial2Decimas = CrearPanel(295, 160, 1, 30, 20, ILI9341_CYAN, 0x3800, ILI9341_BLACK);
 
-    Panelparcial3Minutos = CrearPanel(195, 200, 2, 30, 20, ILI9341_GREEN, 0x3800, DIGITO_FONDO);
-    Panelparcial3Segundos = CrearPanel(245, 200, 2, 30, 20, ILI9341_GREEN, 0x3800, DIGITO_FONDO);
-    Panelparcial3Decimas = CrearPanel(295, 200, 1, 30, 20, ILI9341_GREEN, 0x3800, DIGITO_FONDO);
+    Panelparcial3Minutos = CrearPanel(195, 200, 2, 30, 20, ILI9341_GREEN, 0x3800, ILI9341_BLACK);
+    Panelparcial3Segundos = CrearPanel(245, 200, 2, 30, 20, ILI9341_GREEN, 0x3800, ILI9341_BLACK);
+    Panelparcial3Decimas = CrearPanel(295, 200, 1, 30, 20, ILI9341_GREEN, 0x3800, ILI9341_BLACK);
 
     ILI9341DrawFilledCircle(74, 190, 2, ILI9341_BLUE2);
     ILI9341DrawFilledCircle(74, 221, 2, ILI9341_BLUE2);
@@ -75,28 +82,28 @@ void inicializarPantallaCronometro()
 
 void inicializarPantallaReloj()
 {
-    PanelHoras = CrearPanel(11, 0, 2, 80, 40, ILI9341_GREENYELLOW, 0x3800, DIGITO_FONDO);
-    PanelMinutos = CrearPanel(115, 0, 2, 80, 40, ILI9341_GREENYELLOW, 0x3800, DIGITO_FONDO);
-    PanelSegundos = CrearPanel(225, 0, 2, 80, 40, ILI9341_GREENYELLOW, 0x3800, DIGITO_FONDO);
+    PanelHoras = CrearPanel(11, 0, 2, 80, 40, ILI9341_GREENYELLOW, 0x3800, ILI9341_BLACK);
+    PanelMinutos = CrearPanel(115, 0, 2, 80, 40, ILI9341_GREENYELLOW, 0x3800, ILI9341_BLACK);
+    PanelSegundos = CrearPanel(225, 0, 2, 80, 40, ILI9341_GREENYELLOW, 0x3800, ILI9341_BLACK);
 
-    PanelDia = CrearPanel(5, 100, 2, 30, 20, ILI9341_WHITE, 0x3800, DIGITO_FONDO);
-    PanelMes = CrearPanel(55, 100, 2, 30, 20, ILI9341_WHITE, 0x3800, DIGITO_FONDO);
-    PanelAnio = CrearPanel(110, 100, 4, 30, 20, ILI9341_WHITE, 0x3800, DIGITO_FONDO);
+    PanelDia = CrearPanel(5, 100, 2, 30, 20, ILI9341_WHITE, 0x3800, ILI9341_BLACK);
+    PanelMes = CrearPanel(55, 100, 2, 30, 20, ILI9341_WHITE, 0x3800, ILI9341_BLACK);
+    PanelAnio = CrearPanel(110, 100, 4, 30, 20, ILI9341_WHITE, 0x3800, ILI9341_BLACK);
 
-    PanelHorasAlarma = CrearPanel(90, 140, 2, 30, 20, ILI9341_RED, 0x3800, DIGITO_FONDO);
-    PanelMinutosAlarma = CrearPanel(145, 140, 2, 30, 20, ILI9341_RED, 0x3800, DIGITO_FONDO);
+    PanelHorasAlarma = CrearPanel(90, 140, 2, 30, 20, ILI9341_RED, 0x3800, ILI9341_BLACK);
+    PanelMinutosAlarma = CrearPanel(145, 140, 2, 30, 20, ILI9341_RED, 0x3800, ILI9341_BLACK);
 
     ILI9341DrawCircle(103, 25, 3, ILI9341_GREENYELLOW);
     ILI9341DrawCircle(103, 55, 3, ILI9341_GREENYELLOW);
     ILI9341DrawCircle(210, 25, 3, ILI9341_GREENYELLOW);
     ILI9341DrawCircle(210, 55, 3, ILI9341_GREENYELLOW);
 
-    ILI9341DrawString(97, 105, "-", &font_11x18, ILI9341_WHITE, DIGITO_FONDO);
-    ILI9341DrawString(45, 105, "-", &font_11x18, ILI9341_WHITE, DIGITO_FONDO);
+    ILI9341DrawString(97, 105, "-", &font_11x18, ILI9341_WHITE, ILI9341_BLACK);
+    ILI9341DrawString(45, 105, "-", &font_11x18, ILI9341_WHITE, ILI9341_BLACK);
 
-    //   ILI9341DrawString(5, 147, "ALARMA", &font_11x18, ILI9341_RED, DIGITO_FONDO);
-    ILI9341DrawString(133, 147, ":", &font_11x18, ILI9341_RED, DIGITO_FONDO);
-    ILI9341DrawString(195, 90, "PARCIALES", &font_11x18, ILI9341_RED, DIGITO_FONDO);
+    // ILI9341DrawString(5, 147, "ALARMA", &font_11x18, ILI9341_RED, ILI9341_BLACK);
+    ILI9341DrawString(133, 147, ":", &font_11x18, ILI9341_RED, ILI9341_BLACK);
+    ILI9341DrawString(195, 90, "<PARCIALES>", &font_11x18, ILI9341_RED, ILI9341_BLACK);
 }
 
 //*******************************************FUNCIONES************************************************ */
@@ -314,12 +321,12 @@ void actualizarPantallaReloj(void *p)
         }
         if (alarmaConfigurada)
         {
-            ILI9341DrawString(5, 147, "CONF", &font_11x18, ILI9341_GREEN, DIGITO_FONDO);
+            ILI9341DrawString(5, 147, "<A.CON>", &font_11x18, ILI9341_GREEN, ILI9341_BLACK);
         }
 
         if (!alarmaConfigurada)
         {
-            ILI9341DrawString(5, 147, "DESC", &font_11x18, ILI9341_RED, DIGITO_FONDO);
+            ILI9341DrawString(5, 147, "<A.DES>", &font_11x18, ILI9341_RED, ILI9341_BLACK);
         }
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(250));
     }
@@ -338,7 +345,7 @@ void verificarAlarma(void *p)
 
         if ((alarmaConfigurada) && (timeinfo.tm_hour == alarmaHoras && timeinfo.tm_min == alarmaMinutos && timeinfo.tm_sec == 0))
         {
-            ESP_LOGI("ALARMA", "❗ ALARMA ACTIVADA! Son las %02d:%02d:%02d", timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec);
+            ESP_LOGI("ALARMA", "❗❗❗ ALARMA ACTIVADA ❗❗❗ Son las %02d:%02d:%02d", timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec);
             alarmaActivada = true;
             PrenderLedAzul(true);
         }
@@ -433,7 +440,7 @@ void leerBotonesReloj(void *p)
             {
                 modoAjusteReloj = false;
                 modoAjusteAlarma = false;
-                ESP_LOGI("CONFIG", "✅ Alarma configurada! en %02d:%02d", alarmaHoras, alarmaMinutos);
+                ESP_LOGI("CONFIG", "✅ ✅ ✅ Alarma configurada ✅ ✅ ✅ para las-> %02d:%02d", alarmaHoras, alarmaMinutos);
                 tiempoInicioPresionado = 0;
                 alarmaConfigurada = true;
                 vTaskDelay(pdMS_TO_TICKS(500));
@@ -446,7 +453,7 @@ void leerBotonesReloj(void *p)
                 if (alarmaActivada)
                 {
                     alarmaActivada = false;
-                    ESP_LOGI("CONFIG", "❌ Alarma desactivada por teclado!");
+                    ESP_LOGI("CONFIG", "❌ ❌ ❌ Alarma desactivada por teclado ❌ ❌ ❌");
                     alarmaConfigurada = false;
                     apagarLeds();
                 }
